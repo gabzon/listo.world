@@ -12,12 +12,28 @@ License: GPL2
 
 require_once dirname(__DIR__) . '/typerocket/init.php';
 
-include 'taxonomy/place-type.php';
-include 'taxonomy/activity.php';
-include 'taxonomy/theme.php';
-include 'taxonomy/country.php';
+
+// Add Taxonomy files 
+// include 'taxonomy/place-type.php';
+// include 'taxonomy/activity.php';
+// include 'taxonomy/theme.php';
+// include 'taxonomy/country.php';
 // include 'taxonomy/style.php';
 // include 'taxonomy/year.php';
 // include 'post-types/artist.php';
-// include 'post-types/workshop.php';
+include 'post-types/enquiry.php';
 include 'post-types/place.php';
+
+
+// foreach (glob("api/enquiry/*.php") as $filename) {
+//     include $filename;
+// }
+
+require 'api/enquiry/meta-fields.php';
+
+//require vs include?
+
+
+// foreach (glob("taxonomy/*.php") as $filename) {
+//     include $filename;
+// }

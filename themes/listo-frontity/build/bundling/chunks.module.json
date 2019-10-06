@@ -1,0 +1,81 @@
+{
+  "errors": [],
+  "warnings": [],
+  "version": "4.41.0",
+  "hash": "12604ba273cf5a65a594",
+  "publicPath": "/static/",
+  "outputPath": "/Users/gabriel/Sites/listo.world/web/app/themes/listo-frontity/build/static",
+  "assetsByChunkName": {
+    "list": "list.module.js",
+    "listo-frontity": "listo-frontity.module.js"
+  },
+  "assets": [
+    {
+      "name": "list.module.js",
+      "size": 17979,
+      "chunks": [
+        "list"
+      ],
+      "chunkNames": [
+        "list"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "listo-frontity.module.js",
+      "size": 3605206,
+      "chunks": [
+        "listo-frontity"
+      ],
+      "chunkNames": [
+        "listo-frontity"
+      ],
+      "info": {},
+      "emitted": false
+    }
+  ],
+  "filteredAssets": 0,
+  "entrypoints": {
+    "listo-frontity": {
+      "chunks": [
+        "listo-frontity"
+      ],
+      "assets": [
+        "listo-frontity.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "namedChunkGroups": {
+    "listo-frontity": {
+      "chunks": [
+        "listo-frontity"
+      ],
+      "assets": [
+        "listo-frontity.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "list": {
+      "chunks": [
+        "list"
+      ],
+      "assets": [
+        "list.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "logging": {
+    "webpack.buildChunkGraph.visitModules": {
+      "entries": [],
+      "filteredEntries": 5,
+      "debug": false
+    }
+  },
+  "children": []
+}

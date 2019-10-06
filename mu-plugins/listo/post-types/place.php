@@ -2,7 +2,7 @@
 
 $place_details = tr_meta_box('Place Details');
 
-$artist = tr_post_type('Place')
+$place = tr_post_type('Place')
           ->setIcon('location')
           ->setTitlePlaceholder( 'Enter artist full name' )
           ->setArchivePostsPerPage(-1)

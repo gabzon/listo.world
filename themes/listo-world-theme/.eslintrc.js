@@ -11,18 +11,21 @@ module.exports = {
     'browser': true,
     'jquery': true,
   },
+  'parser': 'babel-eslint',
   'parserOptions': {
     'ecmaFeatures': {
       'globalReturn': true,
       'generators': false,
       'objectLiteralDuplicateProperties': false,
       'experimentalObjectRestSpread': true,
+      'jsx':true,
     },
     'ecmaVersion': 2017,
     'sourceType': 'module',
   },
   'plugins': [
     'import',
+    'react',
   ],
   'settings': {
     'import/core-modules': [],
@@ -34,6 +37,7 @@ module.exports = {
   'rules': {
     'no-console': 0,
     'quotes': ['error', 'single'],
+    'react/jsx-uses-vars': 2,
     'comma-dangle': [
       'error',
       {
@@ -44,5 +48,5 @@ module.exports = {
         'functions': 'ignore',
       },
     ],
-  },
+  },  
 };
