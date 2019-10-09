@@ -9,7 +9,9 @@
 add_action( 'transition_post_status', 'saved_client', 10, 3 );
 add_action( 'admin_notices', 'admin_notice_success');
 
+
 function saved_client ( $new_status, $old_status, $client) {
+  wp_mail( 'gab.zambrano@gmail.com', 'YESS', 'inserted' );
   if ($client->post_type == "enquiries") {
 
     $client_id = $client->ID;
