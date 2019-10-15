@@ -150,3 +150,42 @@ Stack trace:
 [15-Oct-2019 15:18:39 UTC] PHP Warning:  error_log() expects parameter 1 to be string, object given in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/notifications/inquiry.php on line 8
 [15-Oct-2019 15:19:13 UTC] enquiry
 [15-Oct-2019 15:30:02 UTC] je suis rentrée
+[15-Oct-2019 16:32:33 UTC] je suis rentrée
+[15-Oct-2019 16:32:33 UTC] 
+[15-Oct-2019 16:32:33 UTC] 
+[15-Oct-2019 16:32:33 UTC] 
+[15-Oct-2019 16:32:33 UTC] Hi,
+Thank you for requesting a travel offer with List World! 
+We have very well received your request, and we have send it to our travel agencies partners. If you want to see review your request please visit
+[15-Oct-2019 16:32:33 UTC] PHP Notice:  Undefined variable: email in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/notifications/enquiry.php on line 44
+[15-Oct-2019 16:36:39 UTC] PHP Parse error:  syntax error, unexpected 'error_log' (T_STRING) in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/notifications/enquiry.php on line 42
+[15-Oct-2019 16:38:39 UTC] PHP Parse error:  syntax error, unexpected '.' in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/notifications/enquiry.php on line 50
+[15-Oct-2019 16:40:09 UTC] PHP Parse error:  syntax error, unexpected 'error_log' (T_STRING) in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/notifications/enquiry.php on line 46
+[15-Oct-2019 16:40:12 UTC] PHP Parse error:  syntax error, unexpected 'error_log' (T_STRING) in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/notifications/enquiry.php on line 46
+[15-Oct-2019 16:40:13 UTC] PHP Parse error:  syntax error, unexpected 'error_log' (T_STRING) in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/notifications/enquiry.php on line 46
+[15-Oct-2019 16:40:26 UTC] je suis rentrée
+[15-Oct-2019 16:40:26 UTC] gabzon
+[15-Oct-2019 16:40:26 UTC] gab.zambrano@gmail.com
+[15-Oct-2019 16:40:26 UTC] 
+[15-Oct-2019 16:40:26 UTC] Higabzon,
+Thank you for requesting a travel offer with List World! 
+We have very well received your request, and we have send it to our travel agencies partners. If you want to see review your request please visit 
+http://localhost/listo.world/web/enquiry/kyoto/
+[15-Oct-2019 16:40:26 UTC] PHP Notice:  Undefined variable: email in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/notifications/enquiry.php on line 49
+[15-Oct-2019 16:40:35 UTC] je suis rentrée
+[15-Oct-2019 16:40:35 UTC] gabzon
+[15-Oct-2019 16:40:35 UTC] gab.zambrano@gmail.com
+[15-Oct-2019 16:40:35 UTC] 
+[15-Oct-2019 16:40:35 UTC] Higabzon,
+Thank you for requesting a travel offer with List World! 
+We have very well received your request, and we have send it to our travel agencies partners. If you want to see review your request please visit 
+http://localhost/listo.world/web/enquiry/kyoto/
+[15-Oct-2019 16:40:35 UTC] PHP Notice:  Undefined variable: email in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/notifications/enquiry.php on line 49
+[15-Oct-2019 16:41:52 UTC] je suis rentrée
+[15-Oct-2019 16:41:52 UTC] gabzon
+[15-Oct-2019 16:41:52 UTC] gab.zambrano@gmail.com
+[15-Oct-2019 16:41:52 UTC] http://localhost/listo.world/web/enquiry/kyoto/
+[15-Oct-2019 16:41:52 UTC] Higabzon,
+Thank you for requesting a travel offer with List World! 
+We have very well received your request, and we have send it to our travel agencies partners. If you want to see review your request please visit 
+http://localhost/listo.world/web/enquiry/kyoto/
