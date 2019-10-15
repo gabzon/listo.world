@@ -78,7 +78,7 @@ function add_meta_content_enquiry_details() {
 	echo $form->select( 'Flexibility' )->setOptions( $flexibility );
 	echo $form->select( 'Round Trip' )->setOptions( $round_trip );
 	echo $form->date( 'Departure date' );
-	echo $form->date( 'Return date' );	
+	echo $form->date( 'Return date' );
 	echo $form->select( 'Traveling with' )->setOptions( $companions )->setName( 'companions' );
 	echo $form->select( 'Number of adults' )->setOptions( $adults )->setName( 'number_of_adults' );
 	echo $form->select( 'Number of kids (2-11 years old)' )->setOptions( $kids )->setName( 'number_of_kids' );

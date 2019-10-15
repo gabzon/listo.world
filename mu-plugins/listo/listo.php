@@ -13,7 +13,7 @@ License: GPL2
 require_once dirname(__DIR__) . '/typerocket/init.php';
 
 
-// Add Taxonomy files 
+// Add Taxonomy files
 // include 'taxonomy/place-type.php';
 // include 'taxonomy/activity.php';
 // include 'taxonomy/theme.php';
@@ -30,10 +30,4 @@ include 'post-types/place.php';
 // }
 
 require 'api/enquiry/meta-fields.php';
-
-//require vs include?
-
-
-// foreach (glob("taxonomy/*.php") as $filename) {
-//     include $filename;
-// }
+require 'notifications/enquiry.php';
