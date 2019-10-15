@@ -1,0 +1,9 @@
+.uk-card-body {
+  padding: 20px 20px;
+}
+
+@media (min-width: 1200px) {
+  .uk-card-body {
+    padding: 20px 20px !important;
+  }
+}
