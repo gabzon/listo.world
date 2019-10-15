@@ -1,0 +1,152 @@
+[27-Aug-2019 23:38:04 UTC] Berne
+[27-Aug-2019 23:38:04 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type WP_Post as array in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/api/enquiry/meta-fields.php:200
+Stack trace:
+#0 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/endpoints/class-wp-rest-controller.php(423): update_meta_destination('Berne', Object(WP_Post), 'destination', Object(WP_REST_Request), 'enquiry')
+#1 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(603): WP_REST_Controller->update_additional_fields_for_object(Object(WP_Post), Object(WP_REST_Request))
+#2 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/class-wp-rest-server.php(946): WP_REST_Posts_Controller->create_item(Object(WP_REST_Request))
+#3 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/class-wp-rest-server.php(329): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api.php(309): WP_REST_Server->serve_request('/wp/v2/enquirie...')
+#5 /Use in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/api/enquiry/meta-fields.php on line 200
+[27-Aug-2019 23:39:05 UTC] Berne
+[27-Aug-2019 23:39:05 UTC] 66
+[27-Aug-2019 23:39:05 UTC] destination
+[27-Aug-2019 23:39:05 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type WP_Post as array in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/api/enquiry/meta-fields.php:203
+Stack trace:
+#0 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/endpoints/class-wp-rest-controller.php(423): update_meta_destination('Berne', Object(WP_Post), 'destination', Object(WP_REST_Request), 'enquiry')
+#1 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(603): WP_REST_Controller->update_additional_fields_for_object(Object(WP_Post), Object(WP_REST_Request))
+#2 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/class-wp-rest-server.php(946): WP_REST_Posts_Controller->create_item(Object(WP_REST_Request))
+#3 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/class-wp-rest-server.php(329): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api.php(309): WP_REST_Server->serve_request('/wp/v2/enquirie...')
+#5 /Use in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/api/enquiry/meta-fields.php on line 203
+[27-Aug-2019 23:40:00 UTC] Berlin
+[27-Aug-2019 23:40:00 UTC] 67
+[27-Aug-2019 23:40:00 UTC] destination
+[27-Aug-2019 23:40:00 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type WP_Post as array in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/api/enquiry/meta-fields.php:281
+Stack trace:
+#0 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/endpoints/class-wp-rest-controller.php(423): update_meta_flexibility('exact', Object(WP_Post), 'flexibility', Object(WP_REST_Request), 'enquiry')
+#1 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(603): WP_REST_Controller->update_additional_fields_for_object(Object(WP_Post), Object(WP_REST_Request))
+#2 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/class-wp-rest-server.php(946): WP_REST_Posts_Controller->create_item(Object(WP_REST_Request))
+#3 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/class-wp-rest-server.php(329): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api.php(309): WP_REST_Server->serve_request('/wp/v2/enquirie...')
+#5 /Use in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/api/enquiry/meta-fields.php on line 281
+[27-Aug-2019 23:41:03 UTC] Barcelona
+[27-Aug-2019 23:41:03 UTC] 68
+[27-Aug-2019 23:41:03 UTC] destination
+[27-Aug-2019 23:41:03 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type WP_Post as array in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/api/enquiry/meta-fields.php:307
+Stack trace:
+#0 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/endpoints/class-wp-rest-controller.php(423): update_meta_companion('friends', Object(WP_Post), 'companions', Object(WP_REST_Request), 'enquiry')
+#1 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(603): WP_REST_Controller->update_additional_fields_for_object(Object(WP_Post), Object(WP_REST_Request))
+#2 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/class-wp-rest-server.php(946): WP_REST_Posts_Controller->create_item(Object(WP_REST_Request))
+#3 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/class-wp-rest-server.php(329): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api.php(309): WP_REST_Server->serve_request('/wp/v2/enquirie...')
+#5 /User in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/api/enquiry/meta-fields.php on line 307
+[27-Aug-2019 23:42:54 UTC] Porto
+[27-Aug-2019 23:42:54 UTC] 69
+[27-Aug-2019 23:42:54 UTC] destination
+[28-Aug-2019 09:34:55 UTC] PHP Warning:  call_user_func() expects parameter 1 to be a valid callback, function 'update_meta_phone_call' not found or invalid function name in /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/endpoints/class-wp-rest-controller.php on line 423
+[28-Aug-2019 09:34:55 UTC] PHP Warning:  call_user_func() expects parameter 1 to be a valid callback, function 'get_meta_sms' not found or invalid function name in /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/endpoints/class-wp-rest-controller.php on line 395
+[28-Aug-2019 09:34:55 UTC] PHP Warning:  call_user_func() expects parameter 1 to be a valid callback, function 'get_meta_whatsapp' not found or invalid function name in /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/endpoints/class-wp-rest-controller.php on line 395
+[28-Aug-2019 09:34:55 UTC] PHP Warning:  call_user_func() expects parameter 1 to be a valid callback, function 'get_meta_skype' not found or invalid function name in /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/endpoints/class-wp-rest-controller.php on line 395
+[28-Aug-2019 09:34:55 UTC] PHP Warning:  call_user_func() expects parameter 1 to be a valid callback, function 'get_meta_viber' not found or invalid function name in /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/endpoints/class-wp-rest-controller.php on line 395
+[28-Aug-2019 09:34:55 UTC] PHP Warning:  call_user_func() expects parameter 1 to be a valid callback, function 'get_meta_facebook_messenger' not found or invalid function name in /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/endpoints/class-wp-rest-controller.php on line 395
+[06-Oct-2019 13:25:49 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /Users/gabriel/Sites/listo.world/web/wp/wp-admin/includes/update.php on line 137
+[08-Oct-2019 17:12:30 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /Users/gabriel/Sites/listo.world/web/wp/wp-includes/update.php on line 384
+[14-Oct-2019 10:25:17 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'admin_notice_success' not found or invalid function name in /Users/gabriel/Sites/listo.world/web/wp/wp-includes/class-wp-hook.php on line 286
+[14-Oct-2019 10:25:21 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'admin_notice_success' not found or invalid function name in /Users/gabriel/Sites/listo.world/web/wp/wp-includes/class-wp-hook.php on line 286
+[14-Oct-2019 10:25:26 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'admin_notice_success' not found or invalid function name in /Users/gabriel/Sites/listo.world/web/wp/wp-includes/class-wp-hook.php on line 286
+[14-Oct-2019 10:25:28 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'admin_notice_success' not found or invalid function name in /Users/gabriel/Sites/listo.world/web/wp/wp-includes/class-wp-hook.php on line 286
+[14-Oct-2019 13:44:46 UTC] PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected '}' in /Users/gabriel/Sites/listo.world/web/app/uploads/cache/ff0ce015bc576d9004f6aa8af77c28c4d9dd3ad1.php:21
+Stack trace:
+#0 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/gabriel/...', Array)
+#1 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/gabriel/...', Array)
+#2 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /Users/gabriel/Sites/listo.world/web/app/uploads/cache/4b055f9883fdbba8300eac1f2351801733806893.php(23): Illuminate\View\View->render()
+#5 /User in /Users/gabriel/Sites/listo.world/web/app/uploads/cache/ff0ce015bc576d9004f6aa8af77c28c4d9dd3ad1.php on line 21
+[14-Oct-2019 13:44:47 UTC] PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected '}' in /Users/gabriel/Sites/listo.world/web/app/uploads/cache/ff0ce015bc576d9004f6aa8af77c28c4d9dd3ad1.php:21
+Stack trace:
+#0 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/gabriel/...', Array)
+#1 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/gabriel/...', Array)
+#2 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /Users/gabriel/Sites/listo.world/web/app/uploads/cache/4b055f9883fdbba8300eac1f2351801733806893.php(23): Illuminate\View\View->render()
+#5 /User in /Users/gabriel/Sites/listo.world/web/app/uploads/cache/ff0ce015bc576d9004f6aa8af77c28c4d9dd3ad1.php on line 21
+[14-Oct-2019 13:57:43 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: View [inquiry.passenger] not found. in /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/FileViewFinder.php:137
+Stack trace:
+#0 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('inquiry.passeng...', Array)
+#1 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/Factory.php(128): Illuminate\View\FileViewFinder->find('inquiry.passeng...')
+#2 /Users/gabriel/Sites/listo.world/web/app/uploads/cache/4b055f9883fdbba8300eac1f2351801733806893.php(21): Illuminate\View\Factory->make('inquiry.passeng...', Array)
+#3 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/Users/gabriel/...')
+#4 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngin in /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/FileViewFinder.php on line 137
+[14-Oct-2019 13:57:44 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: View [inquiry.passenger] not found. in /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/FileViewFinder.php:137
+Stack trace:
+#0 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('inquiry.passeng...', Array)
+#1 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/Factory.php(128): Illuminate\View\FileViewFinder->find('inquiry.passeng...')
+#2 /Users/gabriel/Sites/listo.world/web/app/uploads/cache/4b055f9883fdbba8300eac1f2351801733806893.php(21): Illuminate\View\Factory->make('inquiry.passeng...', Array)
+#3 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/Users/gabriel/...')
+#4 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngin in /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/FileViewFinder.php on line 137
+[14-Oct-2019 13:58:00 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: View [inquiry.passenger] not found. in /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/FileViewFinder.php:137
+Stack trace:
+#0 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('inquiry.passeng...', Array)
+#1 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/Factory.php(128): Illuminate\View\FileViewFinder->find('inquiry.passeng...')
+#2 /Users/gabriel/Sites/listo.world/web/app/uploads/cache/4b055f9883fdbba8300eac1f2351801733806893.php(21): Illuminate\View\Factory->make('inquiry.passeng...', Array)
+#3 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/Users/gabriel/...')
+#4 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngin in /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/FileViewFinder.php on line 137
+[14-Oct-2019 13:58:01 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: View [inquiry.passenger] not found. in /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/FileViewFinder.php:137
+Stack trace:
+#0 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('inquiry.passeng...', Array)
+#1 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/Factory.php(128): Illuminate\View\FileViewFinder->find('inquiry.passeng...')
+#2 /Users/gabriel/Sites/listo.world/web/app/uploads/cache/4b055f9883fdbba8300eac1f2351801733806893.php(21): Illuminate\View\Factory->make('inquiry.passeng...', Array)
+#3 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/Users/gabriel/...')
+#4 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngin in /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/FileViewFinder.php on line 137
+[14-Oct-2019 13:58:02 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: View [inquiry.passenger] not found. in /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/FileViewFinder.php:137
+Stack trace:
+#0 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('inquiry.passeng...', Array)
+#1 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/Factory.php(128): Illuminate\View\FileViewFinder->find('inquiry.passeng...')
+#2 /Users/gabriel/Sites/listo.world/web/app/uploads/cache/4b055f9883fdbba8300eac1f2351801733806893.php(21): Illuminate\View\Factory->make('inquiry.passeng...', Array)
+#3 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/Users/gabriel/...')
+#4 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngin in /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/FileViewFinder.php on line 137
+[14-Oct-2019 13:58:03 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: View [inquiry.passenger] not found. in /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/FileViewFinder.php:137
+Stack trace:
+#0 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('inquiry.passeng...', Array)
+#1 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/Factory.php(128): Illuminate\View\FileViewFinder->find('inquiry.passeng...')
+#2 /Users/gabriel/Sites/listo.world/web/app/uploads/cache/4b055f9883fdbba8300eac1f2351801733806893.php(21): Illuminate\View\Factory->make('inquiry.passeng...', Array)
+#3 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/Users/gabriel/...')
+#4 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngin in /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/FileViewFinder.php on line 137
+[14-Oct-2019 15:21:21 UTC] PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected '}' in /Users/gabriel/Sites/listo.world/web/app/uploads/cache/c085793e89c0cd87aebbdfb8ad2cca562ab1d64e.php:28
+Stack trace:
+#0 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/gabriel/...', Array)
+#1 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/gabriel/...', Array)
+#2 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /Users/gabriel/Sites/listo.world/web/app/uploads/cache/4b055f9883fdbba8300eac1f2351801733806893.php(21): Illuminate\View\View->render()
+#5 /User in /Users/gabriel/Sites/listo.world/web/app/uploads/cache/c085793e89c0cd87aebbdfb8ad2cca562ab1d64e.php on line 28
+[14-Oct-2019 15:21:23 UTC] PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected '}' in /Users/gabriel/Sites/listo.world/web/app/uploads/cache/c085793e89c0cd87aebbdfb8ad2cca562ab1d64e.php:28
+Stack trace:
+#0 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/gabriel/...', Array)
+#1 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/gabriel/...', Array)
+#2 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /Users/gabriel/Sites/listo.world/web/app/uploads/cache/4b055f9883fdbba8300eac1f2351801733806893.php(21): Illuminate\View\View->render()
+#5 /User in /Users/gabriel/Sites/listo.world/web/app/uploads/cache/c085793e89c0cd87aebbdfb8ad2cca562ab1d64e.php on line 28
+[15-Oct-2019 10:22:07 UTC] PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected ';', expecting ',' or ')' in /Users/gabriel/Sites/listo.world/web/app/uploads/cache/4b055f9883fdbba8300eac1f2351801733806893.php:63
+Stack trace:
+#0 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/gabriel/...', Array)
+#1 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/gabriel/...', Array)
+#2 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /Users/gabriel/Sites/listo.world/web/app/uploads/cache/4ca8822410abbdf5ef9c3760ad9a1e0633bca3c7.php(3): Illuminate\View\Vi in /Users/gabriel/Sites/listo.world/web/app/uploads/cache/4b055f9883fdbba8300eac1f2351801733806893.php on line 63
+[15-Oct-2019 10:22:08 UTC] PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected ';', expecting ',' or ')' in /Users/gabriel/Sites/listo.world/web/app/uploads/cache/4b055f9883fdbba8300eac1f2351801733806893.php:63
+Stack trace:
+#0 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/gabriel/...', Array)
+#1 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/gabriel/...', Array)
+#2 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /Users/gabriel/Sites/listo.world/web/app/themes/listo-sage-uikit/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /Users/gabriel/Sites/listo.world/web/app/uploads/cache/4ca8822410abbdf5ef9c3760ad9a1e0633bca3c7.php(3): Illuminate\View\Vi in /Users/gabriel/Sites/listo.world/web/app/uploads/cache/4b055f9883fdbba8300eac1f2351801733806893.php on line 63
+[15-Oct-2019 15:14:03 UTC] PHP Notice:  Undefined variable: log in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/listo.php on line 48
+[15-Oct-2019 15:14:03 UTC] 
+[15-Oct-2019 15:14:35 UTC] publish
+[15-Oct-2019 15:16:55 UTC] publish
+[15-Oct-2019 15:18:39 UTC] PHP Warning:  error_log() expects parameter 1 to be string, object given in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/notifications/inquiry.php on line 8
+[15-Oct-2019 15:19:13 UTC] enquiry
+[15-Oct-2019 15:30:02 UTC] je suis rentrée
