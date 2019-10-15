@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### 1.12.7: 2019-06-19
 
 * Update to WordPress 5.2.2 ([#444](https://github.com/roots/bedrock/pull/444))
@@ -338,3 +339,24 @@
 ### 1.0.0: 2013-12-18
 
 * Initial release
+=======
+## TODO
+- Integrate React Listo Form into Wordpress Plugin
+- Send email
+- Query Travel agencies and send email
+- Validate email comments (only emails from sent form)
+
+
+## Done
+### 0.0.2: 2019-06-28
+* 
+*
+* Update to WordPress 5.2.2 ([#444](https://github.com/roots/bedrock/pull/444))
+
+### 1.12.7: 2019-06-19
+
+
+
+
+
+>>>>>>> 00d45290abfe3c34548ec28c939b37b580bc4cf7

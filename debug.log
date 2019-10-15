@@ -1,0 +1,53 @@
+[27-Aug-2019 23:38:04 UTC] Berne
+[27-Aug-2019 23:38:04 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type WP_Post as array in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/api/enquiry/meta-fields.php:200
+Stack trace:
+#0 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/endpoints/class-wp-rest-controller.php(423): update_meta_destination('Berne', Object(WP_Post), 'destination', Object(WP_REST_Request), 'enquiry')
+#1 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(603): WP_REST_Controller->update_additional_fields_for_object(Object(WP_Post), Object(WP_REST_Request))
+#2 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/class-wp-rest-server.php(946): WP_REST_Posts_Controller->create_item(Object(WP_REST_Request))
+#3 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/class-wp-rest-server.php(329): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api.php(309): WP_REST_Server->serve_request('/wp/v2/enquirie...')
+#5 /Use in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/api/enquiry/meta-fields.php on line 200
+[27-Aug-2019 23:39:05 UTC] Berne
+[27-Aug-2019 23:39:05 UTC] 66
+[27-Aug-2019 23:39:05 UTC] destination
+[27-Aug-2019 23:39:05 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type WP_Post as array in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/api/enquiry/meta-fields.php:203
+Stack trace:
+#0 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/endpoints/class-wp-rest-controller.php(423): update_meta_destination('Berne', Object(WP_Post), 'destination', Object(WP_REST_Request), 'enquiry')
+#1 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(603): WP_REST_Controller->update_additional_fields_for_object(Object(WP_Post), Object(WP_REST_Request))
+#2 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/class-wp-rest-server.php(946): WP_REST_Posts_Controller->create_item(Object(WP_REST_Request))
+#3 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/class-wp-rest-server.php(329): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api.php(309): WP_REST_Server->serve_request('/wp/v2/enquirie...')
+#5 /Use in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/api/enquiry/meta-fields.php on line 203
+[27-Aug-2019 23:40:00 UTC] Berlin
+[27-Aug-2019 23:40:00 UTC] 67
+[27-Aug-2019 23:40:00 UTC] destination
+[27-Aug-2019 23:40:00 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type WP_Post as array in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/api/enquiry/meta-fields.php:281
+Stack trace:
+#0 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/endpoints/class-wp-rest-controller.php(423): update_meta_flexibility('exact', Object(WP_Post), 'flexibility', Object(WP_REST_Request), 'enquiry')
+#1 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(603): WP_REST_Controller->update_additional_fields_for_object(Object(WP_Post), Object(WP_REST_Request))
+#2 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/class-wp-rest-server.php(946): WP_REST_Posts_Controller->create_item(Object(WP_REST_Request))
+#3 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/class-wp-rest-server.php(329): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api.php(309): WP_REST_Server->serve_request('/wp/v2/enquirie...')
+#5 /Use in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/api/enquiry/meta-fields.php on line 281
+[27-Aug-2019 23:41:03 UTC] Barcelona
+[27-Aug-2019 23:41:03 UTC] 68
+[27-Aug-2019 23:41:03 UTC] destination
+[27-Aug-2019 23:41:03 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type WP_Post as array in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/api/enquiry/meta-fields.php:307
+Stack trace:
+#0 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/endpoints/class-wp-rest-controller.php(423): update_meta_companion('friends', Object(WP_Post), 'companions', Object(WP_REST_Request), 'enquiry')
+#1 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(603): WP_REST_Controller->update_additional_fields_for_object(Object(WP_Post), Object(WP_REST_Request))
+#2 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/class-wp-rest-server.php(946): WP_REST_Posts_Controller->create_item(Object(WP_REST_Request))
+#3 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/class-wp-rest-server.php(329): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api.php(309): WP_REST_Server->serve_request('/wp/v2/enquirie...')
+#5 /User in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/api/enquiry/meta-fields.php on line 307
+[27-Aug-2019 23:42:54 UTC] Porto
+[27-Aug-2019 23:42:54 UTC] 69
+[27-Aug-2019 23:42:54 UTC] destination
+[28-Aug-2019 09:34:55 UTC] PHP Warning:  call_user_func() expects parameter 1 to be a valid callback, function 'update_meta_phone_call' not found or invalid function name in /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/endpoints/class-wp-rest-controller.php on line 423
+[28-Aug-2019 09:34:55 UTC] PHP Warning:  call_user_func() expects parameter 1 to be a valid callback, function 'get_meta_sms' not found or invalid function name in /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/endpoints/class-wp-rest-controller.php on line 395
+[28-Aug-2019 09:34:55 UTC] PHP Warning:  call_user_func() expects parameter 1 to be a valid callback, function 'get_meta_whatsapp' not found or invalid function name in /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/endpoints/class-wp-rest-controller.php on line 395
+[28-Aug-2019 09:34:55 UTC] PHP Warning:  call_user_func() expects parameter 1 to be a valid callback, function 'get_meta_skype' not found or invalid function name in /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/endpoints/class-wp-rest-controller.php on line 395
+[28-Aug-2019 09:34:55 UTC] PHP Warning:  call_user_func() expects parameter 1 to be a valid callback, function 'get_meta_viber' not found or invalid function name in /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/endpoints/class-wp-rest-controller.php on line 395
+[28-Aug-2019 09:34:55 UTC] PHP Warning:  call_user_func() expects parameter 1 to be a valid callback, function 'get_meta_facebook_messenger' not found or invalid function name in /Users/gabriel/Sites/listo.world/web/wp/wp-includes/rest-api/endpoints/class-wp-rest-controller.php on line 395
+[06-Oct-2019 13:25:49 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /Users/gabriel/Sites/listo.world/web/wp/wp-admin/includes/update.php on line 137
+[08-Oct-2019 17:12:30 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /Users/gabriel/Sites/listo.world/web/wp/wp-includes/update.php on line 384
