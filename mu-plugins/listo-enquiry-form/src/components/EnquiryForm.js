@@ -53,8 +53,8 @@ function FormLayout(props) {
 
         const options = {
           method: 'post',
-          url: 'http://localhost/listo.world/web/wp-json/wp/v2/enquiries',
-          //url: 'https://listo.world/web/wp-json/wp/v2/enquiries',
+          //url: 'http://localhost/listo.world/web/wp-json/wp/v2/enquiries',
+          url: 'https://listo.world/web/wp-json/wp/v2/enquiries',
           //url: 'http://localhost:3000/api/web/wp-json/wp/v2/enquiries',
           headers: {            
             'access-control-allow-headers': 'origin, content-type, credentials, x-auth-token',
