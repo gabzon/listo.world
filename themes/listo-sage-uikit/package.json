@@ -37,6 +37,8 @@
     "node": ">= 8.0.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
     "autoprefixer": "~8.2.0",
     "browser-sync": "~2.24.7",
     "browsersync-webpack-plugin": "^0.6.0",
@@ -76,12 +78,22 @@
     "yargs": "~11.0.0"
   },
   "dependencies": {
+    "@bit/gabzon.listo.ui.card": "^0.3.0",
+    "antd": "^3.24.2",
     "bootstrap": "v4.3.1",
     "eslint-plugin-react": "^7.16.0",
     "jquery": "^3.3.1",
+    "listo-enquiry": "^0.1.0",
     "popper.js": "^1.14.7",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
+    "prop-types": "^15.7.2",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-intl": "^3.3.2",
     "uikit": "^3.2.1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
   }
 }

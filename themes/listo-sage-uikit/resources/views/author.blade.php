@@ -3,6 +3,15 @@
 @section('content')
   @include('partials.page-header')
 
+  name
+  Profile (passports, expiry date, flyer clubs, vaccins, embassies, insurance)
+  New enquiry
+  Enquiries
+  Places visited
+  visited countries
+  Challenges
+  Activities
+
   @if (!have_posts())
     <div class="alert alert-warning">
       {{ __('Sorry, no results were found.', 'sage') }}

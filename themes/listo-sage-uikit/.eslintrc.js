@@ -12,9 +12,11 @@ module.exports = {
     'jquery': true,
   },
   'parserOptions': {
+    'ecmaVersion': 6, 
     'ecmaFeatures': {
       'globalReturn': true,
       'jsx': true,
+      'modules': true,
       'generators': false,
       'objectLiteralDuplicateProperties': false,
       'experimentalObjectRestSpread': true,
@@ -25,6 +27,10 @@ module.exports = {
   'plugins': [
     'import',
     'react',
+  ],
+  'extends': [
+    "eslint:recommended",
+    "plugin:react/recommended"
   ],
   'settings': {
     'import/core-modules': [],
@@ -47,5 +53,7 @@ module.exports = {
       },
     ],
     'react/jsx-uses-vars': 2,
+    'react/jsx-uses-react': 2,
+    'react/react-in-jsx-scope': 2
   },
 };

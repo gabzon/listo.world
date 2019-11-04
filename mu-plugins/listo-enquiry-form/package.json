@@ -1,0 +1,21 @@
+{
+  "name": "listo-enquiry-form",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "@wpackio/scripts": "^3.5.0",
+    "fork-ts-checker-webpack-plugin": "^1.6.0",
+    "node-sass": "^4.13.0"
+  },
+  "scripts": {
+    "bootstrap": "wpackio-scripts bootstrap",
+    "build": "wpackio-scripts build",
+    "start": "wpackio-scripts start",
+    "archive": "wpackio-scripts pack"
+  },
+  "dependencies": {
+    "@wpackio/entrypoint": "^3.5.0",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  }
+}

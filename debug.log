@@ -189,3 +189,16 @@ http://localhost/listo.world/web/enquiry/kyoto/
 Thank you for requesting a travel offer with List World! 
 We have very well received your request, and we have send it to our travel agencies partners. If you want to see review your request please visit 
 http://localhost/listo.world/web/enquiry/kyoto/
+[15-Oct-2019 21:41:55 UTC] PHP Notice:  Undefined variable: url in /Users/gabriel/Sites/listo.world/web/app/uploads/cache/1f10aa3d0ee4dafa54ce0b6b3268d6f6073578b4.php on line 9
+[15-Oct-2019 21:41:56 UTC] PHP Notice:  Undefined variable: url in /Users/gabriel/Sites/listo.world/web/app/uploads/cache/1f10aa3d0ee4dafa54ce0b6b3268d6f6073578b4.php on line 9
+[15-Oct-2019 21:43:03 UTC] PHP Warning:  header() expects parameter 3 to be integer, string given in /Users/gabriel/Sites/listo.world/web/wp/wp-includes/pluggable.php on line 1254
+[15-Oct-2019 21:43:04 UTC] PHP Warning:  header() expects parameter 3 to be integer, string given in /Users/gabriel/Sites/listo.world/web/wp/wp-includes/pluggable.php on line 1254
+[24-Oct-2019 23:52:31 UTC] PHP Parse error:  syntax error, unexpected '$user' (T_VARIABLE), expecting ',' or ';' in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/listo.php on line 40
+[24-Oct-2019 23:52:35 UTC] PHP Parse error:  syntax error, unexpected '$user' (T_VARIABLE), expecting ',' or ';' in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/listo.php on line 40
+[24-Oct-2019 23:52:37 UTC] PHP Parse error:  syntax error, unexpected '$user' (T_VARIABLE), expecting ',' or ';' in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/listo.php on line 40
+[24-Oct-2019 23:53:05 UTC] PHP Notice:  Undefined property: WP_Error::$user_nicename in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/listo.php on line 40
+[24-Oct-2019 23:53:43 UTC] PHP Notice:  Undefined property: WP_Error::$user_nicename in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/listo.php on line 37
+[03-Nov-2019 11:39:47 UTC] PHP Notice:  Undefined property: WP_Error::$user_nicename in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/listo.php on line 35
+[03-Nov-2019 11:39:55 UTC] PHP Notice:  Undefined property: WP_Error::$user_nicename in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/listo.php on line 35
+[03-Nov-2019 11:40:06 UTC] PHP Notice:  Undefined property: WP_Error::$user_nicename in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/listo.php on line 35
+[03-Nov-2019 11:40:23 UTC] PHP Notice:  Undefined property: WP_Error::$user_nicename in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/listo.php on line 35
