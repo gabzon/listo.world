@@ -202,3 +202,61 @@ http://localhost/listo.world/web/enquiry/kyoto/
 [03-Nov-2019 11:39:55 UTC] PHP Notice:  Undefined property: WP_Error::$user_nicename in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/listo.php on line 35
 [03-Nov-2019 11:40:06 UTC] PHP Notice:  Undefined property: WP_Error::$user_nicename in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/listo.php on line 35
 [03-Nov-2019 11:40:23 UTC] PHP Notice:  Undefined property: WP_Error::$user_nicename in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/listo.php on line 35
+[04-Nov-2019 11:33:40 UTC] PHP Notice:  Undefined property: WP_Error::$user_nicename in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/listo.php on line 43
+[04-Nov-2019 11:34:03 UTC] PHP Notice:  Undefined property: WP_Error::$user_nicename in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo/listo.php on line 43
+[04-Nov-2019 12:17:30 UTC] PHP Fatal error:  Uncaught LogicException: Manifest /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/dist/app/manifest.json does not exist. in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php:383
+Stack trace:
+#0 /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php(281): WPackio\Enqueue->getManifest('app')
+#1 /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php(159): WPackio\Enqueue->getAssets('app', 'main', Array)
+#2 /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php(217): WPackio\Enqueue->register('app', 'main', Array)
+#3 /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/listo-enquiry-form.php(40): WPackio\Enqueue->enqueue('app', 'main', Array)
+#4 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/class-wp-hook.php(286): ListoEnquiryFormInit->plugin_enq in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php on line 383
+[04-Nov-2019 12:17:31 UTC] PHP Fatal error:  Uncaught LogicException: Manifest /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/dist/app/manifest.json does not exist. in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php:383
+Stack trace:
+#0 /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php(281): WPackio\Enqueue->getManifest('app')
+#1 /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php(159): WPackio\Enqueue->getAssets('app', 'main', Array)
+#2 /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php(217): WPackio\Enqueue->register('app', 'main', Array)
+#3 /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/listo-enquiry-form.php(40): WPackio\Enqueue->enqueue('app', 'main', Array)
+#4 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/class-wp-hook.php(286): ListoEnquiryFormInit->plugin_enq in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php on line 383
+[04-Nov-2019 15:25:29 UTC] PHP Fatal error:  Uncaught LogicException: Manifest /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/dist/app/manifest.json does not exist. in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php:383
+Stack trace:
+#0 /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php(281): WPackio\Enqueue->getManifest('app')
+#1 /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php(159): WPackio\Enqueue->getAssets('app', 'main', Array)
+#2 /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php(217): WPackio\Enqueue->register('app', 'main', Array)
+#3 /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/listo-enquiry-form.php(40): WPackio\Enqueue->enqueue('app', 'main', Array)
+#4 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/class-wp-hook.php(286): ListoEnquiryFormInit->plugin_enq in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php on line 383
+[04-Nov-2019 15:25:59 UTC] PHP Fatal error:  Uncaught LogicException: Manifest /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/dist/app/manifest.json does not exist. in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php:383
+Stack trace:
+#0 /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php(281): WPackio\Enqueue->getManifest('app')
+#1 /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php(159): WPackio\Enqueue->getAssets('app', 'main', Array)
+#2 /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php(217): WPackio\Enqueue->register('app', 'main', Array)
+#3 /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/listo-enquiry-form.php(40): WPackio\Enqueue->enqueue('app', 'main', Array)
+#4 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/class-wp-hook.php(286): ListoEnquiryFormInit->plugin_enq in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php on line 383
+[04-Nov-2019 15:25:59 UTC] PHP Fatal error:  Uncaught LogicException: Manifest /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/dist/app/manifest.json does not exist. in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php:383
+Stack trace:
+#0 /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php(281): WPackio\Enqueue->getManifest('app')
+#1 /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php(159): WPackio\Enqueue->getAssets('app', 'main', Array)
+#2 /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php(217): WPackio\Enqueue->register('app', 'main', Array)
+#3 /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/listo-enquiry-form.php(40): WPackio\Enqueue->enqueue('app', 'main', Array)
+#4 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/class-wp-hook.php(286): ListoEnquiryFormInit->plugin_enq in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php on line 383
+[04-Nov-2019 15:26:00 UTC] PHP Fatal error:  Uncaught LogicException: Manifest /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/dist/app/manifest.json does not exist. in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php:383
+Stack trace:
+#0 /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php(281): WPackio\Enqueue->getManifest('app')
+#1 /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php(159): WPackio\Enqueue->getAssets('app', 'main', Array)
+#2 /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php(217): WPackio\Enqueue->register('app', 'main', Array)
+#3 /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/listo-enquiry-form.php(40): WPackio\Enqueue->enqueue('app', 'main', Array)
+#4 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/class-wp-hook.php(286): ListoEnquiryFormInit->plugin_enq in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php on line 383
+[04-Nov-2019 15:26:07 UTC] PHP Fatal error:  Uncaught LogicException: Manifest /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/dist/app/manifest.json does not exist. in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php:383
+Stack trace:
+#0 /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php(281): WPackio\Enqueue->getManifest('app')
+#1 /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php(159): WPackio\Enqueue->getAssets('app', 'main', Array)
+#2 /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php(217): WPackio\Enqueue->register('app', 'main', Array)
+#3 /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/listo-enquiry-form.php(40): WPackio\Enqueue->enqueue('app', 'main', Array)
+#4 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/class-wp-hook.php(286): ListoEnquiryFormInit->plugin_enq in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php on line 383
+[04-Nov-2019 15:26:08 UTC] PHP Fatal error:  Uncaught LogicException: Manifest /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/dist/app/manifest.json does not exist. in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php:383
+Stack trace:
+#0 /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php(281): WPackio\Enqueue->getManifest('app')
+#1 /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php(159): WPackio\Enqueue->getAssets('app', 'main', Array)
+#2 /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php(217): WPackio\Enqueue->register('app', 'main', Array)
+#3 /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/listo-enquiry-form.php(40): WPackio\Enqueue->enqueue('app', 'main', Array)
+#4 /Users/gabriel/Sites/listo.world/web/wp/wp-includes/class-wp-hook.php(286): ListoEnquiryFormInit->plugin_enq in /Users/gabriel/Sites/listo.world/web/app/mu-plugins/listo-enquiry-form/vendor/wpackio/enqueue/inc/Enqueue.php on line 383

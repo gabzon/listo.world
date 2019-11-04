@@ -39,9 +39,9 @@ function cng_author_base() {
 }
 add_action('init', 'cng_author_base');
 
-function login_redirect( $redirect_to, $request, $user ){
-    $userUrl = get_author_posts_url( get_the_author_meta( 'ID' ), $user->user_nicename );
-    wp_redirect( $userUrl );
-    exit;
-}
-add_filter( 'login_redirect', 'login_redirect', 10, 3 );
+// function login_redirect( $redirect_to, $request, $user ){
+//     $userUrl = get_author_posts_url( get_the_author_meta( 'ID' ), $user->user_nicename );
+//     wp_redirect( $userUrl );
+//     exit;
+// }
+//add_filter( 'login_redirect', 'login_redirect', 10, 3 );
