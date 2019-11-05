@@ -11,8 +11,8 @@ $enquiry->setRest( 'enquiries' );
 $enquiry->apply( [ $enquiry_details, 'lw_theme', 'lw_place_type', 'lw_country', 'lw_theme' ] );
 
 /**
- * Add custom fields to Enquery Custom Post Type
- */
+* Add custom fields to Enquery Custom Post Type
+*/
 function add_meta_content_enquiry_details() {
 
 	$flexibility = [
@@ -75,44 +75,70 @@ function add_meta_content_enquiry_details() {
 
 	$form = tr_form();
 	echo $form->text( 'Destination' );
-	echo $form->select( 'Flexibility' )->setOptions( $flexibility );
-	echo $form->select( 'Round Trip' )->setOptions( $round_trip );
-	echo $form->date( 'Departure date' );
-	echo $form->date( 'Return date' );
+	echo $form->row( $form->select( 'Flexibility' )->setOptions( $flexibility ), $form->select( 'Round Trip' )->setOptions( $round_trip ));
+	echo $form->row( $form->date( 'Departure date' ), $form->date( 'Return date' ) );
 	echo $form->select( 'Traveling with' )->setOptions( $companions )->setName( 'companions' );
-	echo $form->select( 'Number of adults' )->setOptions( $adults )->setName( 'number_of_adults' );
-	echo $form->select( 'Number of kids (2-11 years old)' )->setOptions( $kids )->setName( 'number_of_kids' );
-	echo $form->select( 'Number of babies (less than 2 years old)' )->setOptions( $babies )->setName( 'number_of_babies' );
+	echo $form->row(
+		$form->select( 'Number of adults' )->setOptions( $adults )->setName( 'number_of_adults' ),
+		$form->select( 'Number of kids (2-11 years old)' )->setOptions( $kids )->setName( 'number_of_kids' ),
+		$form->select( 'Number of babies (less than 2 years old)' )->setOptions( $babies )->setName( 'number_of_babies' )
+	);
 	echo $form->text( 'Budget' );
-	echo $form->checkbox( 'Flight options' );
-	echo $form->checkbox( 'Accommodation options' );
-	echo $form->checkbox( 'Transport options' );
-	echo $form->checkbox( 'Activities options' );
-	echo $form->checkbox( 'By Email' );
-	echo $form->text( 'Email' );
-	echo $form->checkbox( 'By Phone Call' );
-	echo $form->text( 'Phone number' );
-	echo $form->checkbox( 'By SMS' );
-	echo $form->text( 'SMS number' );
-	echo $form->checkbox( 'By WhatsApp' );
-	echo $form->text( 'WhatsApp' );
-	echo $form->checkbox( 'By Skype' );
-	echo $form->text( 'Skype' );
-	echo $form->checkbox( 'By Viber' );
-	echo $form->text( 'Viber' );
-	echo $form->checkbox( 'By Facebook Messenger' );
-	echo $form->text( 'Facebook Messenger' );
+	echo $form->row(
+		$form->checkbox( 'Flight options' ),
+		$form->checkbox( 'Accommodation options' )
+	);
+	echo $form->row(
+		$form->checkbox( 'Transport options' ),
+		$form->checkbox( 'Activities options' )
+	);
+	echo $form->row(
+		$form->checkbox( 'By Email' ),
+		$form->text( 'Email' )
+	);
+	echo $form->row(
+		$form->checkbox( 'By Phone Call' ),
+		$form->text( 'Phone number' )
+	);
+	echo $form->row(
+		$form->checkbox( 'By SMS' ),
+		$form->text( 'SMS number' )
+	);
+	echo $form->row(
+		$form->checkbox( 'By WhatsApp' ),
+		$form->text( 'WhatsApp' )
+	);
+	echo $form->row(
+		$form->checkbox( 'By Skype' ),
+		$form->text( 'Skype' )
+	);
+	echo $form->row(
+		$form->checkbox( 'By Viber' ),
+		$form->text( 'Viber' )
+	);
+	echo $form->row(
+		$form->checkbox( 'By Facebook Messenger' ),
+		$form->text( 'Facebook Messenger' )
+	);
+
 	echo $form->checkbox( 'Advanced options' );
-	echo $form->text( 'Flight class' );
-	echo $form->text( 'Food type' );
-	echo $form->text( 'Seat preference' );
-	echo $form->text( 'Property type' );
-	echo $form->text( 'Property rating' );
-	echo $form->text( 'Transport type' );
-	echo $form->text( 'Car type' );
+
+	echo $form->row(
+		$form->text( 'Flight class' ),
+		$form->text( 'Food type' ),
+		$form->text( 'Seat preference' )
+	);
+
+	echo $form->row(
+		$form->text( 'Property type' ),
+		$form->text( 'Property rating' )
+	);
+
+	echo $form->row(
+		$form->text( 'Transport type' ),
+		$form->text( 'Car type' )
+	);
+
 	echo $form->text( 'Themes' );
 	echo $form->items( 'List of places you would like to visit' );
 }
-
-// formLanguage: 'en'.
-// comments: null.

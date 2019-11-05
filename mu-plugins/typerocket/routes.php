@@ -8,4 +8,9 @@
 |
 */
 
-tr_route()->put('/inquiries/{id}/', 'update@Inquiry');
+tr_route()->get()->match('profile')->do(function() {
+    return 'Hi Member 1!';
+});
+
+
+//tr_route()->put('/inquiries/{id}/', 'update@Inquiry');

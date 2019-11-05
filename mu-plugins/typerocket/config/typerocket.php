@@ -9,7 +9,7 @@ return [
     |
     */
     'frontend' => [
-        'assets' => false,
+        'assets' => true,
     ],
 
     /*
@@ -36,7 +36,7 @@ return [
     'admin' => [
         'post_messages' => true,
     ],
-    
+
     /*
     |--------------------------------------------------------------------------
     | Routing
@@ -50,6 +50,6 @@ return [
     |
     */
     'routes' => [
-        'hook' => 'typerocket_loaded',
+        'hook' => '_instant_',
     ],
 ];
