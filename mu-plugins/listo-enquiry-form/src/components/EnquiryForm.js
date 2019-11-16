@@ -104,8 +104,10 @@ function FormLayout(props) {
           status: 'publish'
 
         }).then(function (response) {
-          message.success('This is a success message');
+          message.success('Your request has been submitted. Please check your email in a few seconds for more information.');
           console.log("enquiry", response, "enquiry");
+        }).catch(function( err ) {
+          console.log( err )
         });
       }
     });
