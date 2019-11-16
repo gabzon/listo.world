@@ -153,6 +153,24 @@ const ContactMode = ({ form }) => {
     ],
   }
 
+  const whatsappDecorator = {
+    rules: [
+      {
+        required: enquiry.byWhatsApp,
+        message: 'Please enter a whatsapp phone number',
+      },
+    ],
+  }
+
+  const viberDecorator = {
+    rules: [
+      {
+        required: enquiry.byViber,
+        message: 'Please enter a viber phone number',
+      },
+    ],
+  }
+
   const skypeDecorator = {
     rules: [
       {
@@ -167,24 +185,6 @@ const ContactMode = ({ form }) => {
       {
         required: enquiry.byFacebookMessenger,
         message: 'Please enter your facebook account',
-      },
-    ],
-  }
-
-  const viberDecorator = {
-    rules: [
-      {
-        required: enquiry.byViber,
-        message: 'Please enter a viber phone number',
-      },
-    ],
-  }
-
-  const whatsappDecorator = {
-    rules: [
-      {
-        required: enquiry.byWhatsApp,
-        message: 'Please enter a whatsapp phone number',
       },
     ],
   }
@@ -224,6 +224,27 @@ const ContactMode = ({ form }) => {
             </td>
           </tr>
           <tr>
+            <td><FaWhatsapp /> WhatsApp</td>
+            <td><Switch onChange={updateByWhatsApp} checkedChildren={<Icon type="check" />} unCheckedChildren={<Icon type="close" />} /></td>
+            <td>
+              {
+                displayField(enquiry.byWhatsApp, 'whatsapp') ?
+                  getFieldDecorator('whatsapp', whatsappDecorator)(<Input onChange={updateWhatsAppNumber} prefix={<Icon type="message" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="ex: +41 79 123 4567" allowClear />)
+                  : null
+              }
+            </td>
+          </tr>
+          <tr>
+            <td><FaViber /> Viber</td>
+            <td><Switch onChange={updateByViber} checkedChildren={<Icon type="check" />} unCheckedChildren={<Icon type="close" />} /></td>
+            <td>
+              {displayField(enquiry.byViber, 'viber') ?
+                getFieldDecorator('viber', viberDecorator)(<Input onChange={updateViberNumber} prefix={<Icon type="message" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="ex: +41 79 123 4567" allowClear />)
+                : null
+              }
+            </td>
+          </tr>
+          <tr>
             <td><Icon type="skype" /> Skype:</td>
             <td><Switch onChange={updateBySkype} checkedChildren={<Icon type="check" />} unCheckedChildren={<Icon type="close" />} /></td>
             <td>
@@ -243,43 +264,8 @@ const ContactMode = ({ form }) => {
               }
             </td>
           </tr>
-          <tr>
-            <td><FaViber /> Viber</td>
-            <td><Switch onChange={updateByViber} checkedChildren={<Icon type="check" />} unCheckedChildren={<Icon type="close" />} /></td>
-            <td>
-              {displayField(enquiry.byViber, 'viber') ?
-                getFieldDecorator('viber', viberDecorator)(<Input onChange={updateViberNumber} prefix={<Icon type="message" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="ex: +41 79 123 4567" allowClear />)
-                : null
-              }
-            </td>
-          </tr>
-          <tr>
-            <td><FaWhatsapp /> WhatsApp</td>
-            <td><Switch onChange={updateByWhatsApp} checkedChildren={<Icon type="check" />} unCheckedChildren={<Icon type="close" />} /></td>
-            <td>
-              {
-                displayField(enquiry.byWhatsApp, 'whatsapp') ?
-                  getFieldDecorator('whatsapp', whatsappDecorator)(<Input onChange={updateWhatsAppNumber} prefix={<Icon type="message" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="ex: +41 79 123 4567" allowClear />)
-                  : null
-              }
-            </td>
-          </tr>
         </tbody>
       </table>
-      <List size="small">
-        <List.Item>
-        <Icon type="skype" /> Skype
-          <List.Item.Meta avatar={<Icon type="skype" />}  />
-            <Switch onChange={updateByWhatsApp} checkedChildren={<Icon type="check" />} unCheckedChildren={<Icon type="close" />} />
-          <div>          
-          {
-              displayField(enquiry.byWhatsApp, 'whatsapp') ?
-                getFieldDecorator('whatsapp', whatsappDecorator)(<Input onChange={updateWhatsAppNumber} prefix={<Icon type="message" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="ex: +41 79 123 4567" allowClear />)
-                : null
-            }
-          </div>
-        </List.Item>
-      </List>
     </Form.Item>
   )
 }

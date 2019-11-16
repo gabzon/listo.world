@@ -14,6 +14,12 @@ const AdvancedOptions = () => {
     const intl = useIntl();
     const [enquiry, setEnquiry] = useContext(EnquiryContext);
 
+    // const updateAdvancedOptions = (e) => {
+    //     setEnquiry(prevEnquiry => {
+    //         return { ...prevEnquiry, advancedOptions: e }
+    //     })
+    // }
+
     const updateFlightClass = (e) => {
         setEnquiry(prevEnquiry => { return { ...prevEnquiry, flightClass: e } })
     }
@@ -42,76 +48,76 @@ const AdvancedOptions = () => {
         setEnquiry(prevEnquiry => { return { ...prevEnquiry, carType: e } })
     }
 
-    // const updateThemePreference = (e) => {
-    //     setEnquiry(prevEnquiry => { return { ...prevEnquiry, theme: e } })
-    // }
+    const updateThemePreference = (e) => {
+        setEnquiry(prevEnquiry => { return { ...prevEnquiry, theme: e } })
+    }
 
     return (
         <>
-            <Form.Item label={intl.formatMessage({id:"Advanced.label"})}>
-                <Switch onChange={(checked, event) => setEnquiry(prevEnquiry => { return { ...prevEnquiry, AdvancedOptions: checked } })} checkedChildren={<Icon type="check" />} unCheckedChildren={<Icon type="close" />} />
+            <Form.Item label={intl.formatMessage({ id: "Advanced.label" })}>
+                <Switch onChange={(checked, event) => setEnquiry(prevEnquiry => { return { ...prevEnquiry, advancedOptions: checked } })} checkedChildren={<Icon type="check" />} unCheckedChildren={<Icon type="close" />} />
             </Form.Item>
 
             {
-                enquiry.AdvancedOptions && enquiry.flights ?
-                    <Form.Item label={intl.formatMessage({id:"Advanced.flightClass.label"})}>
+                enquiry.advancedOptions && enquiry.flights ?
+                    <Form.Item label={intl.formatMessage({ id: "Advanced.flightClass.label" })}>
                         <SelectPlaneClass handleClass={updateFlightClass} />
                     </Form.Item>
                     : null
             }
 
             {
-                enquiry.AdvancedOptions && enquiry.flights ?
-                    <Form.Item label={intl.formatMessage({id:"Advanced.food.label"})} help={intl.formatMessage({id:"Advanced.food.help"})}>
+                enquiry.advancedOptions && enquiry.flights ?
+                    <Form.Item label={intl.formatMessage({ id: "Advanced.food.label" })} help={intl.formatMessage({ id: "Advanced.food.help" })}>
                         <SelectPlaneFood handleFood={updateFoodSelection} />
                     </Form.Item>
                     : null
             }
 
             {
-                enquiry.AdvancedOptions && enquiry.flights && (enquiry.companions === 'alone') ?
-                    <Form.Item label={intl.formatMessage({id:"Advanced.seat.label"})} help={intl.formatMessage({id:"Advanced.seat.help"})}>
+                enquiry.advancedOptions && enquiry.flights && (enquiry.companions === 'alone') ?
+                    <Form.Item label={intl.formatMessage({ id: "Advanced.seat.label" })} help={intl.formatMessage({ id: "Advanced.seat.help" })}>
                         <SelectPlaneSeat handleSeat={updateSeatTypePreference} />
                     </Form.Item>
                     : null
             }
 
             {
-                enquiry.AdvancedOptions && enquiry.accommodation ?
-                    <Form.Item label={intl.formatMessage({id:"Advanced.hostingType.label"})}>
+                enquiry.advancedOptions && enquiry.accommodation ?
+                    <Form.Item label={intl.formatMessage({ id: "Advanced.hostingType.label" })}>
                         <SelectAccomodationType handleProperty={updatePropertyTypePreference} />
                     </Form.Item>
                     : null
             }
 
             {
-                enquiry.AdvancedOptions && enquiry.accommodation ?
-                    <Form.Item label={intl.formatMessage({id:"Advanced.rating.label"})}>
+                enquiry.advancedOptions && enquiry.accommodation ?
+                    <Form.Item label={intl.formatMessage({ id: "Advanced.rating.label" })}>
                         <SelectAccomodationRating handleRating={updateAccommodationRatingPreference} />
                     </Form.Item>
                     : null
             }
 
             {
-                enquiry.AdvancedOptions && enquiry.transport ?
-                    <Form.Item label={intl.formatMessage({id:"Advanced.transportType.label"})}>
+                enquiry.advancedOptions && enquiry.transport ?
+                    <Form.Item label={intl.formatMessage({ id: "Advanced.transportType.label" })}>
                         <SelectTransportType handleTransportType={updateTransportTypePreference} />
                     </Form.Item>
                     : null
             }
 
             {
-                enquiry.AdvancedOptions && enquiry.transport ?
-                    <Form.Item label={intl.formatMessage({id:"Advanced.carType.label"})}>
-                        <SelectCarType handleTransportType={updateCarTypePreference} />
+                enquiry.advancedOptions && enquiry.transport ?
+                    <Form.Item label={intl.formatMessage({ id: "Advanced.carType.label" })}>
+                        <SelectCarType handleCarType={updateCarTypePreference} />
                     </Form.Item>
                     : null
             }
-                        
+
             {
-                enquiry.AdvancedOptions && enquiry.activities ?
-                    <Form.Item label={intl.formatMessage({id:"Advanced.themes.label"})}>
-                        <ActivitiesOptions />
+                enquiry.advancedOptions && enquiry.activities ?
+                    <Form.Item label={intl.formatMessage({ id: "Advanced.themes.label" })}>
+                        <ActivitiesOptions handleThemes={updateThemePreference} />
                     </Form.Item>
                     : null
             }

@@ -1,202 +1,300 @@
 <?php
 /**
- * This files integrates the custom fields in the REST API
+* This files integrates the custom fields in the REST API
 
- * @package enquiry
- */
+* @package enquiry
+*/
 
 add_action( 'rest_api_init', 'slug_register_meta' );
 
 
 /**
- * Register custom fields in the REST-API
- */
+* Register custom fields in the REST-API
+*/
 function slug_register_meta() {
 
 	// Destination.
-	register_rest_field(
-		'enquiry',
-		'destination',
-		[
-			'get_callback' => 'get_meta_field',
-			'update_callback' => 'update_meta_field',
-			'schema' => null,
-		]
-	);
+	register_rest_field( 'enquiry', 'destination', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
+
+	// Round trip.
+	register_rest_field( 'enquiry', 'round_trip', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
+
+	//Flexibility
+	register_rest_field( 'enquiry', 'flexibility', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
 
 	// Departure Date.
-	register_rest_field(
-		'enquiry',
-		'departure_date',
-		[
-			'get_callback' => 'get_meta_field',
-			'update_callback' => 'update_meta_field',
-			'schema' => null,
-		]
-	);
+	register_rest_field( 'enquiry', 'departure_date', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
 
 	// Return Date.
-	register_rest_field(
-		'enquiry',
-		'return_date',
-		[
-			'get_callback' => 'get_meta_field',
-			'update_callback' => 'update_meta_field',
-			'schema' => null,
-		]
-	);
+	register_rest_field( 'enquiry','return_date', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
 
-	register_rest_field(
-		'enquiry',
-		'flexibility',
-		[
-			'get_callback' => 'get_meta_field',
-			'update_callback' => 'update_meta_field',
-			'schema' => null,
-		]
-	);
+	// Companions
+	register_rest_field( 'enquiry', 'companions', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
 
-	register_rest_field(
-		'enquiry',
-		'companions',
-		[
-			'get_callback' => 'get_meta_field',
-			'update_callback' => 'update_meta_field',
-			'schema' => null,
-		]
-	);
+	// Number of adults
+	register_rest_field( 'enquiry', 'number_of_adults', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
 
-	register_rest_field(
-		'enquiry',
-		'number_of_adults',
-		[
-			'get_callback' => 'get_meta_field',
-			'update_callback' => 'update_meta_field',
-			'schema' => null,
-		]
-	);
+	// Number of kids
+	register_rest_field( 'enquiry', 'number_of_kids', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
 
-	register_rest_field(
-		'enquiry',
-		'number_of_kids',
-		[
-			'get_callback' => 'get_meta_field',
-			'update_callback' => 'update_meta_field',
-			'schema' => null,
-		]
-	);
+	// Number of babies
+	register_rest_field( 'enquiry', 'number_of_babies', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
 
-	register_rest_field(
-		'enquiry',
-		'number_of_babies',
-		[
-			'get_callback' => 'get_meta_field',
-			'update_callback' => 'update_meta_field',
-			'schema' => null,
-		]
-	);
+	// Budget
+	register_rest_field( 'enquiry', 'budget', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
 
-	register_rest_field(
-		'enquiry',
-		'budget',
-		[
-			'get_callback' => 'get_meta_field',
-			'update_callback' => 'update_meta_field',
-			'schema' => null,
-		]
-	);
+	// By email
+	register_rest_field('enquiry', 'by_email', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
 
-	register_rest_field(
-		'enquiry',
-		'email',
-		[
-			'get_callback' => 'get_meta_field',
-			'update_callback' => 'update_meta_field',
-			'schema' => null,
-		]
-	);
+	// Email
+	register_rest_field('enquiry', 'email', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
 
-	register_rest_field(
-		'enquiry',
-		'phone_call',
-		[
-			'get_callback' => 'get_meta_field',
-			'update_callback' => 'update_meta_phone_call',
-			'schema' => null,
-		]
-	);
+	// By Phone call
+	register_rest_field( 'enquiry', 'by_phone_call', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
 
-	register_rest_field(
-		'enquiry',
-		'sms',
-		[
-			'get_callback' => 'get_meta_sms',
-			'update_callback' => 'update_meta_sms',
-			'schema' => null,
-		]
-	);
+	// phone_call
+	register_rest_field( 'enquiry', 'phone_number', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
 
-	register_rest_field(
-		'enquiry',
-		'whatsapp',
-		[
-			'get_callback' => 'get_meta_whatsapp',
-			'update_callback' => 'update_meta_whatsapp',
-			'schema' => null,
-		]
-	);
+	// by_sms
+	register_rest_field( 'enquiry', 'by_sms', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
 
-	register_rest_field(
-		'enquiry',
-		'skype',
-		[
-			'get_callback' => 'get_meta_skype',
-			'update_callback' => 'update_meta_skype',
-			'schema' => null,
-		]
-	);
+	// sms
+	register_rest_field( 'enquiry', 'sms_number', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
 
-	register_rest_field(
-		'enquiry',
-		'viber',
-		[
-			'get_callback' => 'get_meta_viber',
-			'update_callback' => 'update_meta_viber',
-			'schema' => null,
-		]
-	);
+	// by_whatsapp
+	register_rest_field( 'enquiry', 'by_whatsapp', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
 
-	register_rest_field(
-		'enquiry',
-		'facebook_messenger',
-		[
-			'get_callback' => 'get_meta_facebook_messenger',
-			'update_callback' => 'update_facebook_messenger',
-			'schema' => null,
-		]
-	);
+	// whatsapp
+	register_rest_field( 'enquiry', 'whatsapp', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
+
+	// by_skype
+	register_rest_field( 'enquiry', 'by_skype', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
+
+	// skype
+	register_rest_field( 'enquiry', 'skype', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
+
+	// by_viber
+	register_rest_field( 'enquiry', 'by_viber', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
+
+	// viber
+	register_rest_field( 'enquiry', 'viber', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
+
+	// by_facebook_messenger
+	register_rest_field( 'enquiry', 'by_facebook_messenger', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
+
+	// facebook_messenger
+	register_rest_field( 'enquiry', 'facebook_messenger', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
+
+	// flight_options
+	register_rest_field( 'enquiry', 'flight_options', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
+
+	// accommodation_options
+	register_rest_field( 'enquiry', 'accommodation_options', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
+
+	//transport_options
+	register_rest_field( 'enquiry', 'transport_options', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
+
+	// activities_options
+	register_rest_field( 'enquiry', 'activities_options', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
+
+	// advanced_options
+	register_rest_field( 'enquiry', 'advanced_options', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
+
+	// flight_class
+	register_rest_field( 'enquiry', 'flight_class', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
+
+	// Food type
+	register_rest_field( 'enquiry', 'food_type', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
+
+	// Seat preference
+	register_rest_field( 'enquiry', 'seat_preference', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
+
+	// property_type
+	register_rest_field( 'enquiry', 'property_type', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
+
+	// property_rating
+	register_rest_field( 'enquiry', 'property_rating', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
+
+
+
+
+	// transport_type
+	register_rest_field( 'enquiry', 'transport_type', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
+
+	// car_type
+	register_rest_field( 'enquiry', 'car_type', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
+
+	// themes
+	register_rest_field( 'enquiry', 'themes', [
+		'get_callback' => 'get_meta_field',
+		'update_callback' => 'update_meta_field',
+		'schema' => null,
+	]);
 }
 
 
-
 /**
- * Returns the selected custom field
+* Returns the selected custom field
 
- * @param object $object the enquiry.
- * @param string $field_name the name of the custom field.
- * @param string $request the requested field.
- * */
+* @param object $object the enquiry.
+* @param string $field_name the name of the custom field.
+* @param string $request the requested field.
+* */
 function get_meta_field( $object, $field_name, $request ) {
 	return get_post_meta( $object['id'], $field_name, true );
 }
 
 /**
- * Updates the destination field on REST API
+* Updates the destination field on REST API
 
- * @param string $value new destination.
- * @param object $object the enquery object.
- * @param string $field_name custom field name.
- */
+* @param string $value new destination.
+* @param object $object the enquery object.
+* @param string $field_name custom field name.
+*/
 function update_meta_field( $value, $object, $field_name ) {
 
 	if ( ! $value || ! is_string( $value )) {
@@ -205,10 +303,6 @@ function update_meta_field( $value, $object, $field_name ) {
 
 	return update_post_meta( $object->ID, $field_name, $value );
 }
-
-
-
-
 
 
 // /**

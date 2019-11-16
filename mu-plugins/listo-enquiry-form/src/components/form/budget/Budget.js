@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { EnquiryContext } from '../../../states/EnquiryContext';
-import { Form, Slider } from 'antd';
+import { Form, Slider, Tooltip, Icon } from 'antd';
+import { FormattedMessage } from 'react-intl';
 
 const marks = {
     100: '100 CHF',
@@ -35,7 +36,16 @@ const Budget = ({ form: { getFieldDecorator } }) => {
     }
 
     return (
-        <Form.Item label="Budget" required>
+        <Form.Item label={
+            <span>
+                <FormattedMessage id="Budget.label" />
+                <em className="blue ml1">
+                    <Tooltip title={<FormattedMessage id="Budget.help" />}>
+                        <Icon type="info-circle-o" style={{ marginRight: 4 }} />
+                    </Tooltip>
+                </em>
+            </span>
+        } required>
             {getFieldDecorator('budget', budgetFieldOptions)(
                 <Slider range
                     marks={marks}

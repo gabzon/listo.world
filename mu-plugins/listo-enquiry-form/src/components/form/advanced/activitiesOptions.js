@@ -4,18 +4,7 @@ import { useIntl } from 'react-intl';
 
 const { Option } = Select;
 
-
-const ThemeOptions = (props) => (
-    <Select placeholder="Themes" mode="multiple">
-        {props.themes.map((item, i) => {
-            return (
-                <Option key={i} value={item}>{item}</Option>
-            )
-        })}
-    </Select>
-)
-
-const ActivitiesOptions = () => {
+const ActivitiesOptions = ({ handleThemes }) => {
     const intl = useIntl();
     const themes = [
         intl.formatMessage({ id: 'Advanced.themes.romance' }),
@@ -28,13 +17,19 @@ const ActivitiesOptions = () => {
         intl.formatMessage({ id: 'Advanced.themes.nature' }),
         intl.formatMessage({ id: 'Advanced.themes.discovery' }),
         intl.formatMessage({ id: 'Advanced.themes.beach' }),
-        intl.formatMessage({ id: 'Advanced.themes.wellbeing' }),  
+        intl.formatMessage({ id: 'Advanced.themes.wellbeing' }),
     ];
 
     return (
         <div>
-            <ThemeOptions themes={themes} />
-        </div>        
+            <Select placeholder="Themes" mode="multiple" onChange={handleThemes}>
+                {themes.map((item, i) => {
+                    return (
+                        <Option key={i} value={item}>{item}</Option>
+                    )
+                })}
+            </Select>            
+        </div>
     )
 }
 

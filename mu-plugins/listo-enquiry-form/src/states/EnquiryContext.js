@@ -2,12 +2,14 @@ import React, { useState, createContext } from 'react';
 
 const EnquiryContext = createContext();
 
+const browserLanguage = navigator.language.split(/[-_]/)[0];
+
 const EnquiryProvider = (props) => {
   const initialState = {
-    formLanguage: 'en',
+    formLanguage: browserLanguage,
     destination: null,
     roundTrip: 'round trip',
-    deparetureDate: null,
+    departureDate: null,
     returnDate: null,
     flexibility: null,
     companions: 'alone',

@@ -5,6 +5,7 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 //import { EnquiryContext } from '../states/EnquiryContext';
 
+import FormLanguage from './form/language/FormLanguage';
 import Destination from './form/destination/Destination';
 import TravelDates from './form/dates/TravelDates';
 import Budget from './form/budget/Budget';
@@ -13,14 +14,16 @@ import SelectCompanions from './form/companions/Companions';
 import Comments from './form/comments/Comments';
 import ContactMode from './form/contact/ContactMode';
 import AdvancedOptions from './form/advanced/AdvancedOptions';
+import { EnquiryContext } from '../states/EnquiryContext';
 import axios from 'axios';
+import WPAPI from 'wpapi';
 
 import {
   Row,
   Col,
   Form,
-  Button
-  //message, 
+  Button,
+  message,
 } from 'antd';
 
 
@@ -33,75 +36,87 @@ function FormLayout(props) {
     wrapperCol: { span: 18 },
   }
 
+  const [enquiry] = React.useContext(EnquiryContext);
+
   const handleInquiry = (e) => {
     e.preventDefault();
 
     props.form.validateFields((err, values) => {
       if (!err) {
         console.log('Received values of form: ', values);
-        const data = {
-          "title": "Leeds",
-          "content": "A hot mom lives there",
-          "status": "publish",
-          "destination": "Nicaragua",
-          "flexibility": "exact",
-          "companions": "alone",
-          "email": "1"
-        }        
-        
-        const token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvbGlzdG8ud29ybGQiLCJpYXQiOjE1NzI5MDE3NDIsIm5iZiI6MTU3MjkwMTc0MiwiZXhwIjoxNTczNTA2NTQyLCJkYXRhIjp7InVzZXIiOnsiaWQiOiIxIn19fQ.7gWqEcflcDlVt9_ZOThV78V_LOEx_jV7R4bkuTg0BzY';        
 
-        const options = {
-          method: 'post',
-          //url: 'http://localhost/listo.world/web/wp-json/wp/v2/enquiries',
-          url: 'https://listo.world/wp-json/wp/v2/enquiries',
-          //url: 'http://localhost:3000/api/web/wp-json/wp/v2/enquiries',
-          headers: {            
-            'access-control-allow-headers': 'origin, content-type, credentials, x-auth-token',
-            //'Access-Control-Allow-Origin': 'http://localhost:3000/',            
-            'access-control-allow-credentials': true,   
-            //'crossDomain': true,         
-            'content-type': 'application/json',
-            'authorization': `bearer ${token}`
-          },
-          data: data,
-          withCredentials: false
-        }
-
-        console.log(options);
-        //axios.defaults.headers.post['Access-Control-Allow-Origin'] = 'http://localhost:3000/';
-        axios(options)
-        .then(res => {
-          console.log(res);
-          console.log('yes');
-        })
-        .catch(function (error) {
-          console.log('Error', error.message);
+        const wp = new WPAPI({
+          endpoint: window.wpApiSettings.endpoint,
+          nonce: window.wpApiSettings.nonce
         });
 
+        wp.enquiries = wp.registerRoute("wp/v2", "/enquiries/");
+
+        const isList = (field) => {
+          if (field != null) {
+            return field.join();
+          } else {
+            return "";
+          }
+        }
+
+        wp.enquiries().create({
+          title: enquiry.destination.join(),
+          content: enquiry.comments,
+          round_trip: enquiry.roundTrip,
+          companions: enquiry.companions,
+          departure_date: enquiry.departureDate,
+          return_date: enquiry.returnDate,
+          destination: enquiry.destination.join(),
+          flexibility: enquiry.flexibility,
+          companions: enquiry.companions,
+          number_of_adults: enquiry.numberOfAdults.toString(),
+          number_of_kids: enquiry.numberOfKids,
+          number_of_babies: enquiry.numberOfBabies,
+          budget: enquiry.budget.join(),
+          flight_options: enquiry.flights ? "1" : "0",
+          accommodation_options: enquiry.accommodation ? "1" : "0",
+          transport_options: enquiry.transport ? "1" : "0",
+          activities_options: enquiry.activities ? "1" : "0",
+          by_email: enquiry.byEmail ? "1" : "0",
+          email: enquiry.email,
+          by_phone_call: enquiry.byPhoneCall ? "1" : "0",
+          phone_number: enquiry.phoneNumber,
+          by_sms: enquiry.bySMS ? "1" : "0",
+          sms_number: enquiry.phoneSMS,
+          by_whatsapp: enquiry.byWhatsApp ? "1" : "0",
+          whatsapp: enquiry.whatsapp,
+          by_viber: enquiry.byViber ? "1" : "0",
+          viber: enquiry.viber,
+          by_facebook_messenger: enquiry.byFacebookMessenger ? "1" : "0",
+          facebook_messenger: enquiry.facebookMessenger,
+          by_skype: enquiry.bySkype ? "1" : "0",
+          skype: enquiry.skype,
+          advanced_options: enquiry.advancedOptions ? "1" : "0",
+          flight_class: enquiry.flightClass,
+          food_type: isList(enquiry.food),
+          seat_preference: enquiry.seat,
+          property_type: isList(enquiry.propertyType),
+          property_rating: enquiry.rating.toString(),
+          transport_type: isList(enquiry.transportType),
+          car_type: isList(enquiry.carType),
+          themes: isList(enquiry.theme),
+          status: 'publish'
+
+        }).then(function (response) {
+          message.success('This is a success message');
+          console.log("enquiry", response, "enquiry");
+        });
       }
     });
   }
-
-  // axios.post('https://api-helper.azurewebsites.net/token', {
-  //   username: 'api',
-  //   password: 'MY_PASSWORD',
-  //   grant_type: 'MY_GRANT_TYPE'
-  // }, {
-
-  //   })
-  //   .then(response => {
-  //     console.log(response)
-  //   })
-  //   .catch(error => {
-  //     console.log(error.response)
-  //   });
 
 
   return (
     <Row className="bg-white pt2 mt2">
       <Col span={24}>
         <Form layout="horizontal" onSubmit={handleInquiry} className="" {...formItemLayout}>
+          <FormLanguage form={form} />
           <Destination form={form} />
           <TravelDates form={form} />
           <SelectCompanions form={form} />
@@ -124,3 +139,5 @@ function FormLayout(props) {
 const EnquiryForm = Form.create({ name: 'Enquiry' })(FormLayout);
 
 export default EnquiryForm;
+
+

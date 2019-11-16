@@ -18,7 +18,7 @@ add_action('init', 'listo_user_role');
 
 
 // https://wordpress.stackexchange.com/questions/31791/how-do-i-programmatically-set-default-role-for-new-users
-// when someone signs up, it will automatically become 
+// when someone signs up, it will automatically become
 add_filter('pre_option_default_role', function($default_role){
     return 'listo_user';
     return $default_role;

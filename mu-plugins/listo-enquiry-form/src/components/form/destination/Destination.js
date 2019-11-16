@@ -96,7 +96,7 @@ const Destination = ({ form }) => {
     const keys = getFieldValue('keys');
 
     const addMoreDestinations = () => {
-        if (enquiry.roundTrip === 'multiple') {
+        if (enquiry.roundTrip === 'multicity') {
             return true;
         }
         return false;

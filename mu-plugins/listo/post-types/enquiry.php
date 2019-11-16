@@ -16,13 +16,14 @@ $enquiry->apply( [ $enquiry_details, 'lw_theme', 'lw_place_type', 'lw_country', 
 function add_meta_content_enquiry_details() {
 
 	$flexibility = [
-		'Exact dates' => 'exact',
-		'+/- 3 days'  => 'days',
-		'+/- 1 week'  => 'week',
-		'+/- 2 weeks' => 'weeks',
-		'+/- 1 month' => 'month',
-		'Whenever'    => 'whenever',
-		'Best period' => 'best',
+		'Exact dates' => 'Exact dates',
+		'+/- 3 days'  => '+/- 3 days',
+		'+/- 1 week'  => '+/- 1 week',
+		'+/- 2 weeks' => '+/- 2 weeks',
+		'+/- 1 month' => '+/- 1 Month',
+		'Weekend'    	=> 'Weekend',
+		'Long weekend'=> 'Long weekend',
+		'Best period' => 'Best Period',
 	];
 
 	$round_trip = [
@@ -33,44 +34,11 @@ function add_meta_content_enquiry_details() {
 
 	$companions = [
 		'Alone'               => 'alone',
-		'Companion'           => 'companion',
+		'Couple'           		=> 'couple',
 		'Family'              => 'family',
 		'Friends'             => 'friends',
 		'Colleagues'          => 'colleagues',
 		'Group (> 8 people)'  => 'group',
-	];
-
-	$adults = [
-		'1'     => '1',
-		'2'     => '2',
-		'3'     => '3',
-		'4'     => '4',
-		'5'     => '5',
-		'6'     => '6',
-		'7'     => '7',
-		'more'  => 'more',
-	];
-
-	$kids = [
-		'0' => '0',
-		'1' => '1',
-		'2' => '2',
-		'3' => '3',
-		'4' => '4',
-		'5' => '5',
-		'6' => '6',
-		'7' => '7',
-		'8' => '8',
-		'more'  => 'more',
-	];
-
-	$babies = [
-		'0' => '0',
-		'1' => '1',
-		'2' => '2',
-		'3' => '3',
-		'4' => '4',
-		'more' => 'more',
 	];
 
 	$form = tr_form();
@@ -79,9 +47,9 @@ function add_meta_content_enquiry_details() {
 	echo $form->row( $form->date( 'Departure date' ), $form->date( 'Return date' ) );
 	echo $form->select( 'Traveling with' )->setOptions( $companions )->setName( 'companions' );
 	echo $form->row(
-		$form->select( 'Number of adults' )->setOptions( $adults )->setName( 'number_of_adults' ),
-		$form->select( 'Number of kids (2-11 years old)' )->setOptions( $kids )->setName( 'number_of_kids' ),
-		$form->select( 'Number of babies (less than 2 years old)' )->setOptions( $babies )->setName( 'number_of_babies' )
+		$form->text( 'Number of adults' )->setName( 'number_of_adults' ),
+		$form->text( 'Number of kids (2-11 years old)' )->setName( 'number_of_kids' ),
+		$form->text( 'Number of babies (less than 2 years old)' )->setName( 'number_of_babies' )
 	);
 	echo $form->text( 'Budget' );
 	echo $form->row(

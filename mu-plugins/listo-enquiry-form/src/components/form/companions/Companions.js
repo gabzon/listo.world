@@ -79,7 +79,7 @@ const SelectCompanions = ({ form }) => {
             </Form.Item>
 
             <Row>
-                {displaySelect(enquiry.companions, true) ? <Col xs={8} sm={16} md={24} lg={5}></Col> : null}
+                { displaySelect(enquiry.companions, true) ? <Col xs={8} sm={16} md={24} lg={5}></Col> : null}
 
                 {
                     displaySelect(enquiry.companions, true) ?

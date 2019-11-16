@@ -42,16 +42,16 @@ const EnquiryOptions = () => {
   return (
     <Form.Item label={intl.formatMessage({id:'Options.label'})} required>
       <ButtonGroup>
-        <Button size="large" type="primary" ghost={!enquiry.flights} onClick={updateFlights}>
+        <Button type="primary" ghost={!enquiry.flights} onClick={updateFlights}>
           <FaPlaneDeparture />&nbsp; <FormattedMessage id="Options.flights" />
         </Button>
-        <Button size="large" type="primary" ghost={!enquiry.accommodation} onClick={updateAccommodation}>
+        <Button type="primary" ghost={!enquiry.accommodation} onClick={updateAccommodation}>
           <FaRegBuilding />&nbsp; <FormattedMessage id="Options.accommodation" />
         </Button>
-        <Button size="large" type="primary" ghost={!enquiry.transport} onClick={updateTransport}>
+        <Button type="primary" ghost={!enquiry.transport} onClick={updateTransport}>
           <FaCar />&nbsp; <FormattedMessage id="Options.transport" />
           </Button>
-        <Button size="large" type="primary" ghost={!enquiry.activities} onClick={updateActivities}>
+        <Button type="primary" ghost={!enquiry.activities} onClick={updateActivities}>
         <FaHiking />&nbsp; <FormattedMessage id="Options.activities" />
           </Button>
       </ButtonGroup>
