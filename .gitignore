@@ -9,3 +9,5 @@ web/app/uploads/*
 /uploads
 /upgrade
 /plugins
+
+/mu-plugins/listo-enquiry-form/node_modules

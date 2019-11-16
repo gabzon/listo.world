@@ -1,17 +1,17 @@
 [
     {
         "name": "wpackio/enqueue",
-        "version": "1.6.0",
-        "version_normalized": "1.6.0.0",
+        "version": "2.0.0",
+        "version_normalized": "2.0.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/swashata/wpackio-enqueue.git",
-            "reference": "e140954090275714843c2e33da00510d20c54638"
+            "reference": "cb4e420a879ae4900d7336e2dcccc8dcc18aca44"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/swashata/wpackio-enqueue/zipball/e140954090275714843c2e33da00510d20c54638",
-            "reference": "e140954090275714843c2e33da00510d20c54638",
+            "url": "https://api.github.com/repos/swashata/wpackio-enqueue/zipball/cb4e420a879ae4900d7336e2dcccc8dcc18aca44",
+            "reference": "cb4e420a879ae4900d7336e2dcccc8dcc18aca44",
             "shasum": ""
         },
         "require-dev": {
@@ -24,7 +24,7 @@
             "wimg/php-compatibility": "^8.2.0",
             "wp-coding-standards/wpcs": "^1.0.0"
         },
-        "time": "2019-04-14 06:26:39",
+        "time": "2019-10-29 09:32:53",
         "type": "library",
         "installation-source": "dist",
         "autoload": {

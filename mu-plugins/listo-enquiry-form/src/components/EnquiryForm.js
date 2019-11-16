@@ -60,6 +60,8 @@ function FormLayout(props) {
           }
         }
 
+        
+
         wp.enquiries().create({
           title: enquiry.destination.join(),
           content: enquiry.comments,
@@ -97,19 +99,17 @@ function FormLayout(props) {
           food_type: isList(enquiry.food),
           seat_preference: enquiry.seat,
           property_type: isList(enquiry.propertyType),
-          property_rating: enquiry.rating.toString(),
+          property_rating: Number.isInteger(enquiry.rating) ? enquiry.rating.toString() : "",
           transport_type: isList(enquiry.transportType),
           car_type: isList(enquiry.carType),
           themes: isList(enquiry.theme),
           status: 'publish'
-
         }).then(function (response) {
-          message.success('Your request has been submitted. Please check your email in a few seconds for more information.');
+          //message.success('Your request has been submitted. Please check your email in a few seconds for more information.');
           console.log("enquiry", response, "enquiry");
-        }).catch(function( err ) {
-          console.log( err )
-        });
-      }
+        }).catch(e => console.log(e));
+        console.log('test just finished');
+      }      
     });
   }
 

@@ -32,5 +32,6 @@ module.exports = {
 	},
 	// Override system calculated public path of the `dist` directory
 	// This must have forward slash, otherwise it will not work.
-	distPublicPath: undefined,
+	//distPublicPath: undefined,
+	distPublicPath: '/app/mu-plugins/listo-enquiry-form/dist',
 };
