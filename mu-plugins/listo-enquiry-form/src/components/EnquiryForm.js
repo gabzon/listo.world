@@ -105,14 +105,14 @@ function FormLayout(props) {
           themes: isList(enquiry.theme),
           status: 'publish'
         }).then(function (response) {
-          //message.success('Your request has been submitted. Please check your email in a few seconds for more information.');
-          console.log("enquiry", response, "enquiry");
-        }).catch(e => console.log(e));
-        console.log('test just finished');
+          message
+          .success('Your request has been submitted successfully. Please check your email in a few seconds for more information. Please check on your spam folder in case you did not received any email after 5 minutes', 5)
+          .then(props.form.resetFields());
+          console.log("enquiry", response, "enquiry");          
+        }).catch(e => console.log(e));        
       }      
     });
   }
-
 
   return (
     <Row className="bg-white pt2 mt2">
