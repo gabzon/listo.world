@@ -17,16 +17,19 @@
       <ul class="uk-navbar-nav">
         @if ( is_user_logged_in() )
           <li><a href="{{ esc_url(bloginfo('url')) }}/profile/{{ get_the_author_meta('display_name') }}" uk-icon="icon: user"></a></li>
-          <li><a href="{{ esc_url(bloginfo('url'))}}/wp/wp-login.php?action=logout" uk-icon="icon: sign-out"></a></li>
+          <li><a href="{{ esc_url(wp_logout_url(bloginfo('url')))}}/wp/wp-login.php?action=logout" uk-icon="icon: sign-out"></a></li>
         @else
           <li><a href="{{ esc_url(bloginfo('url'))}}/login" uk-icon="icon: sign-in"> Sign in</a></li>
-          <li><a href="" uk-icon="icon: file-edit"> Sign up</a></li>
+          <li><a href="{{ esc_url(bloginfo('url'))}}/wp/wp-login.php?action=register" uk-icon="icon: file-edit"> Sign up</a></li>
         @endif
       </ul>
     </div>
-
   </nav>
 </div>
+
+
+
+
 
 
 
