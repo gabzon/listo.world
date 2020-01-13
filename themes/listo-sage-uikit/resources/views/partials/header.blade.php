@@ -28,20 +28,19 @@
 </div>
 
 
-
-
-
-
-
 <div id="offcanvas-slide" uk-offcanvas>
   <div class="uk-offcanvas-bar">
 
     <ul class="uk-nav uk-nav-default">
-      <li class="uk-active"><a href="#">Active</a></li>
-      <li><a href="#">Item</a></li>
-      <li class="uk-nav-header">Header</li>
-      <li><a href="#">Item</a></li>
-      <li><a href="#">Item</a></li>
+      <li class="uk-active"><a href="#">Enquiry</a></li>
+      <li><a href="#">Latest Posts</a></li>
+      <li><a href="#">Account</a></li>
+      <li><a href="#">My list</a></li>
+      <li class="uk-nav-header">About Us</li>
+      <li><a href="#">Our mission</a></li>
+      <li><a href="#">Vision</a></li>
+      <li><a href="#">Values</a></li>
+      <li><a href="#">Terms and Conditions</a></li>
       <li class="uk-nav-divider"></li>
       <li><a href="#">Item</a></li>
     </ul>

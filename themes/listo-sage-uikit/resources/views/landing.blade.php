@@ -6,8 +6,7 @@
 
 @section('content')
   <div class="uk-background-primary uk-light uk-padding uk-panel">
-            <p class="uk-h4">Primary
-            dkdkdk</p>
+            <p class="uk-h4">Primary</p>
         </div>
   @if ( is_user_logged_in() )
     @while(have_posts()) @php the_post() @endphp
