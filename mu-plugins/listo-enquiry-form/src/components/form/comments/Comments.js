@@ -22,7 +22,7 @@ const Comments = () => {
           <FormattedMessage id="Comments.label" />
           <em className="blue ml1">            
             <Tooltip title={<FormattedMessage id="Comments.help" />}>
-              <Icon type="info-circle-o" style={{ marginRight: 4 }} />
+              <Icon type="info-circle-o" style={{ marginRight: 4, marginLeft: 4 }} />
             </Tooltip>
           </em>
         </span>}

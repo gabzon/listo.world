@@ -115,7 +115,7 @@ function FormLayout(props) {
   }
 
   return (
-    <Row className="bg-white pt2 mt2">
+    <Row className="bg-white pt-2 mt-2">
       <Col span={24}>
         <Form layout="horizontal" onSubmit={handleInquiry} className="" {...formItemLayout}>
           <FormLanguage form={form} />

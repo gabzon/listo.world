@@ -41,7 +41,7 @@ const Budget = ({ form: { getFieldDecorator } }) => {
                 <FormattedMessage id="Budget.label" />
                 <em className="blue ml1">
                     <Tooltip title={<FormattedMessage id="Budget.help" />}>
-                        <Icon type="info-circle-o" style={{ marginRight: 4 }} />
+                        <Icon type="info-circle-o" style={{ marginRight: 4, marginLeft: 4 }} />
                     </Tooltip>
                 </em>
             </span>

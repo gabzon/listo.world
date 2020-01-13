@@ -24,7 +24,7 @@ const EnquiryProvider = (props) => {
     comments: null,
     email: null,
     phoneNumber: null,
-    byEmail: false,
+    byEmail: true,
     byPhoneCall: false,
     bySMS: false,
     phoneSMS: null,

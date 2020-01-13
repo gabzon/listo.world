@@ -191,11 +191,11 @@ const ContactMode = ({ form }) => {
 
   return (
     <Form.Item label="Contact mode:">
-      <table width="100%">
+      <table width="100%" className="contact-mode-table">
         <tbody>
           <tr>
             <td width="25%"><Icon type="mail" /> Email: </td>
-            <td width="5%"><Switch onChange={updateByEmail} checkedChildren={<Icon type="check" />} unCheckedChildren={<Icon type="close" />} /></td>
+            <td width="5%"><Switch onChange={updateByEmail} defaultChecked checkedChildren={<Icon type="check" />} unCheckedChildren={<Icon type="close" />} /></td>
             <td width="40%">
               {displayField(enquiry.byEmail, 'email') ?
                 getFieldDecorator('email', emailDecorator)(<Input onChange={updateEmail} prefix={<Icon type="mail" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="ex: john.smith@gmail.com" allowClear />)
