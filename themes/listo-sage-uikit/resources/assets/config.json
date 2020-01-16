@@ -8,9 +8,9 @@
       "./scripts/customizer.js"
     ]
   },
-  "publicPath": "/app/themes/listo-sage-uikit",
-  "devUrl": "http://localhost/listo.world/web",
-  "proxyUrl": "http://localhost:3000",
+  "publicPath": "/wp-content/themes/listo-sage-uikit",
+  "devUrl": "http://listo-world.local",
+  "proxyUrl": "http://listo-world.local:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [
     "app/**/*.php",

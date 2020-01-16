@@ -4,7 +4,7 @@
   <body @php body_class() @endphp>
     @php do_action('get_header') @endphp
     @include('partials.header')
-    <div class="wrap uk-container" role="document">
+    <div class="wrap" role="document">
       <div class="content">
         <main class="main">
           @yield('content')
@@ -21,3 +21,5 @@
     @php wp_footer() @endphp
   </body>
 </html>
+
+<!--  .uk-container This class allows me to do the same as container in bootstrap -->
