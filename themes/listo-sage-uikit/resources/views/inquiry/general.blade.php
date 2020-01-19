@@ -1,26 +1,28 @@
-<div class="uk-card uk-card-body uk-grid-small uk-padding-small">
-  <table class="uk-table uk-table-hover uk-table-divider uk-table-small">
-    <tbody>
-      <tr>
-        <td><small class="b"><i class="fas fa-globe-americas"></i> Destination</small></td>
-        <td><small>{{ tr_posts_field('destination') }}</small></td>
-      </tr>
-      <tr>
-        <td><small class="b"><i class="fas fa-random"></i> Flexibility</small></td>
-        <td><small>{{ tr_posts_field('flexibility') }}</small></td>
-      </tr>
-      <tr>
-        <td><small class="b"><i class="fas fa-arrows-alt-h"></i> Trip type</small></td>
-        <td><small>{{ tr_posts_field('round_trip') }}</small></td>
-      </tr>
-      <tr>
-        <td><small class="b"><i class="fas fa-calendar"></i> Departure</small></td>
-        <td><small>{{ tr_posts_field('departure_date') }}</small></td>
-      </tr>
-      <tr>
-        <td><small class="b"><i class="fas fa-calendar"></i> Return</small></td>
-        <td><small>{{ tr_posts_field('return_date') }}</small></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<table class="table-auto w-full">
+  <tbody>
+    <tr class="border-b">
+      <td class="font-bold py-2"><i class="fas fa-globe-americas"></i> Destination</td>
+      <td class="py-2">{{ tr_posts_field('destination') }}</td>
+    </tr>
+    <tr class="border-b" style="padding-bottom: 30px">
+      <td class="py-2 font-bold"><i class="fas fa-random"></i> Flexibility</td>
+      <td class="py-2">{{ tr_posts_field('flexibility') }}</td>
+    </tr>
+    <tr class="border-b">
+      <td class="py-2 font-bold"><i class="fas fa-arrows-alt-h"></i> Trip type</td>
+      <td class="py-2 capitalize">{{ tr_posts_field('round_trip') }}</td>
+    </tr>
+    <tr class="border-b">
+      <td  class="py-2 font-bold"><i class="far fa-calendar"></i> Departure</td>
+      <td class="py-2">{{ tr_posts_field('departure_date') }}</td>
+    </tr>
+    <tr class="border-b">
+      <td class="py-2 font-bold"><i class="far fa-calendar"></i> Return</td>
+      <td class="py-2">{{ tr_posts_field('return_date') }}</td>
+    </tr>
+    <tr class="border-b bg-gray-200">
+      <td class="font-bold py-2"><i class="fas fa-money-bill-alt"></i> Budget</td>
+      <td class="py-2 font-bold">CHF {{ tr_posts_field('budget') }}</td>
+    </tr>
+  </tbody>
+</table>

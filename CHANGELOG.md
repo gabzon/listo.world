@@ -3,7 +3,8 @@
 - Send email
 - Query Travel agencies and send email
 - Validate email comments (only emails from sent form)
-
+- Privacy policy link URL (https://listo.world/privacy-policy)
+- Cookie policy. and URL (https://listo.world/cookie-policy)
 
 ## Done
 ### 0.0.2: 2019-06-28
