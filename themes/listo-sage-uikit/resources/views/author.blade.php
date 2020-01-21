@@ -16,7 +16,7 @@ $query = new WP_Query( $args );
 
 <div class="container mx-auto py-5">
   <div class="my-5">
-    <a href="{{ home_url('/') }}" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded hover:no-underline">New Enquiry</a>
+    <a href="{{ site_url('enquiry-form') }}" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded hover:no-underline">New Enquiry</a>
   </div>
   <br>
   <table width="100%" class="table-auto">

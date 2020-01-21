@@ -12432,6 +12432,205 @@ iframe.uk-cover {
   }
 }
 
+/* line 1, resources/assets/styles/components/_comments.scss */
+
+.comment-respond,
+.entry-pings,
+.entry-comments {
+  color: #444;
+  padding: 20px 45px 40px 45px;
+  overflow: hidden;
+}
+
+/* line 9, resources/assets/styles/components/_comments.scss */
+
+.entry-comments h3 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+/* line 14, resources/assets/styles/components/_comments.scss */
+
+.comment-respond h3,
+.entry-pings h3 {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+/* line 20, resources/assets/styles/components/_comments.scss */
+
+.comment-respond {
+  padding-bottom: 5%;
+  margin: 20px 1px 20px 1px;
+  border-left: none !important;
+}
+
+/* line 26, resources/assets/styles/components/_comments.scss */
+
+.comment-header {
+  color: #adaeb3;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* line 32, resources/assets/styles/components/_comments.scss */
+
+.comment-header cite a {
+  border: none;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* line 39, resources/assets/styles/components/_comments.scss */
+
+.comment-header .comment-meta a {
+  border: none;
+  color: #adaeb3;
+}
+
+/* line 44, resources/assets/styles/components/_comments.scss */
+
+li.comment {
+  border-right: none;
+}
+
+/* line 49, resources/assets/styles/components/_comments.scss */
+
+.comment-content {
+  clear: both;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+/* line 55, resources/assets/styles/components/_comments.scss */
+
+.comment-list li {
+  font-size: 14px;
+  padding: 20px 30px 20px 50px;
+}
+
+/* line 60, resources/assets/styles/components/_comments.scss */
+
+.comment-list .children {
+  margin-top: 40px;
+  border: 1px solid #ccc;
+}
+
+/* line 65, resources/assets/styles/components/_comments.scss */
+
+.comment-list li li {
+  background-color: #f5f5f6;
+}
+
+/* line 69, resources/assets/styles/components/_comments.scss */
+
+.comment-respond input[type="email"],
+.comment-respond input[type="text"],
+.comment-respond input[type="url"] {
+  width: 50%;
+}
+
+/* line 75, resources/assets/styles/components/_comments.scss */
+
+.comment-respond label {
+  display: block;
+  margin-right: 12px;
+}
+
+/* line 80, resources/assets/styles/components/_comments.scss */
+
+.entry-comments .comment-author {
+  margin-bottom: 1px;
+  position: relative;
+}
+
+/* line 85, resources/assets/styles/components/_comments.scss */
+
+.entry-comments .comment-author img {
+  border-radius: 50%;
+  border: 5px solid #fff;
+  left: -80px;
+  top: -5px;
+  position: absolute;
+  width: 60px;
+}
+
+/* line 94, resources/assets/styles/components/_comments.scss */
+
+.entry-pings .reply {
+  display: none;
+}
+
+/* line 98, resources/assets/styles/components/_comments.scss */
+
+.form-allowed-tags {
+  background-color: #f5f5f5;
+  font-size: 16px;
+  padding: 24px;
+}
+
+/* line 104, resources/assets/styles/components/_comments.scss */
+
+.comment-reply-link {
+  cursor: pointer;
+  background-color: #444;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  padding: 4px 10px 4px;
+  text-transform: uppercase;
+  width: auto;
+}
+
+/* line 118, resources/assets/styles/components/_comments.scss */
+
+.comment-reply-link:hover {
+  color: #fff;
+}
+
+/* line 122, resources/assets/styles/components/_comments.scss */
+
+.comment-notes {
+  display: none;
+}
+
+/* line 126, resources/assets/styles/components/_comments.scss */
+
+textarea#comment {
+  border: 1px solid lightgray;
+}
+
+/* line 130, resources/assets/styles/components/_comments.scss */
+
+#commentform input#author,
+#commentform input#email,
+#commentform input#url {
+  border: 1px solid lightgray;
+  height: 30px;
+  border-radius: 5px;
+}
+
+/* line 138, resources/assets/styles/components/_comments.scss */
+
+.form-submit input#submit {
+  background-color: lightgray;
+  margin: 10px 0;
+  padding: 8px 15px;
+  border-radius: 5px;
+  color: gray;
+}
+
+/* line 146, resources/assets/styles/components/_comments.scss */
+
+.form-submit input#submit:hover {
+  background-color: gray;
+  color: white;
+}
+
 /* line 1, resources/assets/styles/layouts/_header.scss */
 
 .uk-navbar-nav > li > a,

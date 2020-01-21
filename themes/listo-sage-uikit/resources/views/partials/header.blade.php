@@ -4,7 +4,7 @@
 
   for the logout = https://wordpress.stackexchange.com/questions/67336/how-to-log-out-without-confirmation-do-you-really-want-to-log-out
   --}}
-<header class="bg-gray-100 border-b-2 px-2 py-3">
+<header class="bg-gray-100 shadow border px-2 py-3">
   <div class="flex items-center justify-between">
     <div>
       <a href="{{ home_url('/') }}" class="text-gray-600 focus:outline-none hover:no-underline hover:text-gray-800 text-xl">

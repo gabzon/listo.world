@@ -1,7 +1,6 @@
 <?php
 /**
 * This files integrates the custom fields in the REST API
-
 * @package enquiry
 */
 
@@ -279,7 +278,6 @@ function slug_register_meta() {
 
 /**
 * Returns the selected custom field
-
 * @param object $object the enquiry.
 * @param string $field_name the name of the custom field.
 * @param string $request the requested field.
@@ -290,7 +288,6 @@ function get_meta_field( $object, $field_name, $request ) {
 
 /**
 * Updates the destination field on REST API
-
 * @param string $value new destination.
 * @param object $object the enquery object.
 * @param string $field_name custom field name.

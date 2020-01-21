@@ -1,7 +1,7 @@
 <!doctype html>
 <html {!! get_language_attributes() !!}>
   @include('partials.head')
-  <body @php body_class() @endphp>
+  <body class="<?php $allClasses = get_post_class(); foreach ($allClasses as $class) { echo $class . " "; } ?> bg-gray-100">
     @php do_action('get_header') @endphp
     @include('partials.header')
     <div class="wrap" role="document">
