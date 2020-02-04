@@ -1,34 +1,68 @@
 <?php
 //https://wordpress.stackexchange.com/questions/100644/how-to-auto-send-email-when-publishing-a-custom-post-type
 
-add_action( 'transition_post_status', 'enquiry_email_confirmation', 10, 3 );
+function Appbase_Connection($query){
+  $appbase_key = 'djluYTFUTVZrOmZhZTBhNTI3LWRmNDAtNDI4Zi05MjRkLTVhODJlYjVlODliZA==';
+  $curl = curl_init();
 
-// function send_mails_on_publish( $new_status, $old_status, $post )
-// {
-//   error_log( $post->post_type );
-//     if ( 'publish' !== $new_status or 'publish' === $old_status
-//         or 'my_custom_type' !== get_post_type( $post ) )
-//         return;
-//
-//     $subscribers = get_users( array ( 'role' => 'subscriber' ) );
-//     $emails      = array ();
-//
-//     foreach ( $subscribers as $subscriber )
-//         $emails[] = $subscriber->user_email;
-//
-//     $body = sprintf( 'Hey there is a new entry!
-//         See <%s>',
-//         get_permalink( $post )
-//     );
-//
-//     wp_mail( $emails, 'New entry!', $body );
-// }
+  curl_setopt_array ($curl, array(
+    CURLOPT_URL => "https://scalr.api.appbase.io/experiensa/_doc/_search",
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_ENCODING => "",
+    CURLOPT_MAXREDIRS => 10,
+    CURLOPT_TIMEOUT => 30,
+    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST => "POST",
+    CURLOPT_POSTFIELDS => json_encode(["query" => ["match_all" => new stdClass()]]),
+    CURLOPT_POSTFIELDS => json_encode( 
+      $query
+    ),
+    CURLOPT_HTTPHEADER => array(
+      "Authorization: Basic {$appbase_key}",
+      "Content-Type: application/json"
+    ),
+  ));
+
+  $response = curl_exec($curl);
+  $err = curl_error($curl);
+
+  curl_close($curl);
+
+  if ($err) {
+    echo "cURL Error #:" . $err;
+    return $err;
+  } else {
+    $json = json_decode($response, true);
+    $emails = [];
+    if (count($json['hits']['hits']) <= 1) {
+      error_log('solo hay un elemento'); 
+    } else {
+      error_log("I'm in many elements");
+      foreach($json['hits']['hits'] as $i) {
+        $emails[] = $i['_source']['email']; 
+      }      
+    }
+    $email_string = implode(", ", $emails);        
+    return $email_string;
+  }  
+}
+
+function Simple_Query(){
+  $query = array(
+      "query" => array( "match" => array( "client_status" => "listo" ))
+  );
+  error_log("I'm inside Simple Query", 0);
+  $result = Appbase_Connection($query);  
+  return $result;
+}
+
+add_action( 'transition_post_status', 'enquiry_email_confirmation', 10, 3 );
 
 function enquiry_email_confirmation( $new_status, $old_status, $post ){
   if ($post->post_type === 'enquiry') {
     //if ($new_status === 'publish' && 'publish' !== $old_status) {
     if ($new_status === 'publish') {
-      error_log('je suis rentrée');
+      //error_log('I am inside enquiry_email_confirmation');
 
       // email for the client
       $current_user = wp_get_current_user();
@@ -37,18 +71,26 @@ function enquiry_email_confirmation( $new_status, $old_status, $post ){
       $user_firstname = $current_user->user_firstname;
       $user_lastname = $current_user->user_lastname;
 
-      //error_log($user_display_name);
-      //error_log($user_email);
 
-      $message = "Hi " . $user_display_name . "," . PHP_EOL;
-      $message .= "Thank you for requesting a travel offer with List World! " . PHP_EOL;
-      $message .= "We have very well received your request, and we have send it to our travel agencies partners. If you want to see review your request please visit " . PHP_EOL;
-      $message .= get_permalink( $post->ID );
+      $msg_user = "Hi " . $user_display_name . "," . PHP_EOL;
+      $msg_user .= "Thank you for requesting a travel offer with List World! " . PHP_EOL;
+      $msg_user .= "We have very well received your request, and we have send it to our travel agencies partners. If you want to see review your request please visit " . PHP_EOL;
+      $msg_user .= get_permalink( $post->ID );
 
       //error_log(get_permalink( $post->ID ));
-      //error_log($message);
+      //error_log($msg_user);
 
-      wp_mail( $user_email, 'Travel enquiry', $message );
+      // Email for the user
+      wp_mail( $user_email, 'Travel enquiry', $msg_user );
+      
+      //$msg_agency = "Hi " . $user_display_name . "," . PHP_EOL;
+      //$msg_agency .= "You have received travel request from " . $user_display_name . " " . PHP_EOL;
+      
+      
+      $emails = Simple_Query();      
+      
+      // Email for the agencies
+      wp_mail( 'gabriel@sevinci.com', 'Result of Simple Query',  $emails );
     }
   }
 }

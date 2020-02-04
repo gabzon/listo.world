@@ -11,3 +11,4 @@ web/app/uploads/*
 /plugins
 
 /mu-plugins/listo-enquiry-form/node_modules
+/listo/config.php
