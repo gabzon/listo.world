@@ -85,7 +85,9 @@ function enquiry_email_confirmation( $new_status, $old_status, $post ){
       // Email for the user
       if( $emails ){
         $to = 'gab.zambrano@gmail.com';
-        $to_agencies = wp_mail( $to, 'Result of Simple Query',  'finally Iam working' );
+        $subject = 'Result of Simple Query';
+        $message = 'finally Iam working';
+        $to_agencies = wp_mail( $to, $subject, $message );
         $to_user = wp_mail( $user_email, 'Travel enquiry', $msg_user );
       }
       
