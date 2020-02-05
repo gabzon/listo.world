@@ -84,8 +84,8 @@ function enquiry_email_confirmation( $new_status, $old_status, $post ){
       $emails = query_builder();
       // Email for the user
       if( $emails ){
-        $to_user = wp_mail( $user_email, 'Travel enquiry', $msg_user );
         $to_agencies = wp_mail( 'gabriel@sevinci.com', 'Result of Simple Query',  $emails );
+        $to_user = wp_mail( $user_email, 'Travel enquiry', $msg_user );
       }
       
       error_log($to_user);
