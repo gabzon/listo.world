@@ -1,7 +1,7 @@
 <?php
 //https://wordpress.stackexchange.com/questions/100644/how-to-auto-send-email-when-publishing-a-custom-post-type
 
-function Appbase_Connection($query){
+function appbase_connection($query){
   $appbase_key = 'djluYTFUTVZrOmZhZTBhNTI3LWRmNDAtNDI4Zi05MjRkLTVhODJlYjVlODliZA==';
   $curl = curl_init();
 
@@ -47,12 +47,12 @@ function Appbase_Connection($query){
   }  
 }
 
-function Simple_Query(){
+function query_builder(){
   $query = array(
       "query" => array( "match" => array( "client_status" => "listo" ))
   );
-  error_log("I'm inside Simple Query", 0);
-  $result = Appbase_Connection($query);  
+  
+  $result = appbase_connection($query);  
   return $result;
 }
 
@@ -62,7 +62,7 @@ function enquiry_email_confirmation( $new_status, $old_status, $post ){
   if ($post->post_type === 'enquiry') {
     //if ($new_status === 'publish' && 'publish' !== $old_status) {
     if ($new_status === 'publish') {
-      //error_log('I am inside enquiry_email_confirmation');
+      
 
       // email for the client
       $current_user = wp_get_current_user();
@@ -77,20 +77,20 @@ function enquiry_email_confirmation( $new_status, $old_status, $post ){
       $msg_user .= "We have very well received your request, and we have send it to our travel agencies partners. If you want to see review your request please visit " . PHP_EOL;
       $msg_user .= get_permalink( $post->ID );
 
-      //error_log(get_permalink( $post->ID ));
-      //error_log($msg_user);
-
-      // Email for the user
-      wp_mail( $user_email, 'Travel enquiry', $msg_user );
       
       //$msg_agency = "Hi " . $user_display_name . "," . PHP_EOL;
       //$msg_agency .= "You have received travel request from " . $user_display_name . " " . PHP_EOL;
+
+      $emails = query_builder();
+      // Email for the user
+      if( $emails ){
+        $to_user = wp_mail( $user_email, 'Travel enquiry', $msg_user );
+        $to_agencies = wp_mail( 'gabriel@sevinci.com', 'Result of Simple Query',  $emails );
+      }
       
+      error_log($to_user);
+      error_log($to_agencies);
       
-      $emails = Simple_Query();      
-      
-      // Email for the agencies
-      wp_mail( 'gabriel@sevinci.com', 'Result of Simple Query',  $emails );
     }
   }
 }
