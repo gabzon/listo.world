@@ -88,7 +88,7 @@ function enquiry_email_confirmation( $new_status, $old_status, $post ){
         $subject = 'Result of Simple Query';
         $message = 'finally Iam working';
         $to_agencies = wp_mail( $to, $subject, $message );
-        //$to_user = wp_mail( $user_email, 'Travel enquiry', $msg_user );
+        $to_user = wp_mail( $user_email, 'Travel enquiry', $msg_user );
       }
       
       error_log($to_user);
