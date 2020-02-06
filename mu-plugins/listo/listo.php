@@ -11,7 +11,7 @@ License: GPL2
 */
 
 require_once dirname(__DIR__) . '/typerocket/init.php';
-
+require_once 'config.php';
 
 // Add Taxonomy files
 // include 'taxonomy/place-type.php';
@@ -21,18 +21,18 @@ require_once dirname(__DIR__) . '/typerocket/init.php';
 // include 'taxonomy/style.php';
 // include 'taxonomy/year.php';
 // include 'post-types/artist.php';
-include 'post-types/enquiry.php';
-include 'post-types/place.php';
-include 'post-types/user.php';
+include ROOT_DIR . '/post-types/enquiry.php';
+include ROOT_DIR . '/post-types/place.php';
+include ROOT_DIR . '/post-types/user.php';
 
 
 // foreach (glob("api/enquiry/*.php") as $filename) {
 //     include $filename;
 // }
 
-require 'api/enquiry/meta-fields.php';
-require 'notifications/enquiry.php';
+require ROOT_DIR . '/api/enquiry/meta-fields.php';
+require ROOT_DIR . '/notifications/enquiry.php';
 
-include 'settings/defaults.php';
-include 'settings/roles.php';
-include 'settings/authentication.php';
+include ROOT_DIR . '/settings/defaults.php';
+include ROOT_DIR . '/settings/roles.php';
+include ROOT_DIR . '/settings/authentication.php';

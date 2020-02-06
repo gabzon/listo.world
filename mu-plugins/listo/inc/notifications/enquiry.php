@@ -1,6 +1,10 @@
 <?php
 //https://wordpress.stackexchange.com/questions/100644/how-to-auto-send-email-when-publishing-a-custom-post-type
 
+//use user;
+
+//include ROOT_DIR . '/controllers/User.php';
+
 function appbase_connection($query){
   $appbase_key = 'djluYTFUTVZrOmZhZTBhNTI3LWRmNDAtNDI4Zi05MjRkLTVhODJlYjVlODliZA==';
   $curl = curl_init();
@@ -66,28 +70,31 @@ function enquiry_email_confirmation( $new_status, $old_status, $post ){
 
       // email for the client
       $current_user = wp_get_current_user();
+
+      // $name = new User();
+
       $user_display_name = $current_user->display_name;
       $user_email = $current_user->user_email;
       $user_firstname = $current_user->user_firstname;
       $user_lastname = $current_user->user_lastname;
-
+      
 
       $msg_user = "Hi " . $user_display_name . "," . PHP_EOL;
       $msg_user .= "Thank you for requesting a travel offer with List World! " . PHP_EOL;
       $msg_user .= "We have very well received your request, and we have send it to our travel agencies partners. If you want to see review your request please visit " . PHP_EOL;
       $msg_user .= get_permalink( $post->ID );
 
-      
       //$msg_agency = "Hi " . $user_display_name . "," . PHP_EOL;
-      //$msg_agency .= "You have received travel request from " . $user_display_name . " " . PHP_EOL;
-
+      $msg_agency .= "You have received travel request from " . $user_display_name . " through the Listo Website" . PHP_EOL;
+      $msg_agency .= "if you want to see the enquiry please visit the following link:" . PHP_EOL;
+      $msg_agency .= get_permalink( $post->ID );
+      
       $emails = query_builder();
+      
       // Email for the user
-      if( $emails ){
-        $to = 'gab.zambrano@gmail.com';
-        $subject = 'Result of Simple Query';
-        $to_agencies = wp_mail( $to, $subject, $message );
-        $to_user = wp_mail( $user_email, 'Travel enquiry', $emails );
+      if( $emails ){                
+        $to_agencies = wp_mail( $emails, 'Travel request', $msg_agency );
+        $to_user = wp_mail( $user_email, 'Travel enquiry', $msg_user );
       }
       
       error_log($to_user);

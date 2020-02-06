@@ -5,7 +5,7 @@
       @if (get_the_author_meta('first_name') || get_the_author_meta('last_name'))
       {{ get_the_author_meta('first_name') . ' ' . get_the_author_meta('last_name') }}        
       @else
-          {{ get_the_author()}}      
+          {{ get_the_author()}}                
       @endif
   </a>
 </div>
@@ -13,10 +13,10 @@
 
 <table class="table-auto">
   <tbody>
-    @if ( tr_posts_field('by_email') == 1 )
+    @if ( get_the_author_meta('email',get_the_author_meta('ID')) )
     <tr>
       <td class="py-2"><i class="fas fa-envelope"></i></td>
-      <td class="py-2">{{ tr_posts_field('email')}}</td>
+      <td class="py-2">{{ get_the_author_meta('email',get_the_author_meta('ID')) }}</td>
     </tr>
     @endif
 
